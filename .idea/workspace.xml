@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b714f865-807c-40b8-89d3-6eb37caa98ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/search/searchhome.html" afterPath="$PROJECT_DIR$/app/views/search/searchhome.html" />
-    </list>
+    <list default="true" id="b714f865-807c-40b8-89d3-6eb37caa98ca" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="view1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/enquiries/view1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="131">
@@ -83,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchhome.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="searchhome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/search/searchhome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
@@ -465,12 +463,12 @@
       <workItem from="1519309562032" duration="729000" />
       <workItem from="1519310448055" duration="18289000" />
       <workItem from="1519490791070" duration="162000" />
-      <workItem from="1519589174900" duration="4907000" />
+      <workItem from="1519589174900" duration="5081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24087000" />
+    <option name="totallyTimeSpent" value="24261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -769,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/enquiries/view1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/enquiryreplyconfirmation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -813,6 +803,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="154" column="29" lean-forward="false" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/enquiries/view1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="51" column="47" lean-forward="true" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
           <folding />
         </state>
       </provider>
