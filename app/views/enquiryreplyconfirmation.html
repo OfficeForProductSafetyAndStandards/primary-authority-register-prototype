@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Enquiry confirmation
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Reply sent
+        </h1>
+        <p class="font-large">
+          Your reference number is <br>
+          <strong class="bold">HF55532</strong>
+        </p>
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>Your reply has been sent to Mole Valley District Council</p>
+      <p>You will recieve an email notification if they reply and will be able to view the reply from a link on your dashboard.</p>
+      <form action="/enquiries">
+
+            <input class="button" type="submit" value="Back to enquires">
+
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

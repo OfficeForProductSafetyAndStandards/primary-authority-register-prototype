@@ -11,6 +11,17 @@
 
   <div class="grid-row">
     <div class="column-two-thirds">
+        <div role="group" class="error-summary" tabindex="-1">
+
+            <h2 class="visually-hidden">Error message</h2>
+
+            <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                You need to complete this section
+            </h2>
+
+            <a href="#edit-about-partnership">You must fill in the missing information.</a>
+
+        </div>
 
       <h1 class="heading-xlarge">
 
@@ -19,7 +30,7 @@
         What are you enquiring about?
       </h1>
 
-      <form action="/enquiry2">
+      <form action="/enquiryconfirmation">
         <div class="form-group">
 
               <h3 class="heading-medium">
@@ -27,7 +38,7 @@
               </h3>
 
             <div class="multiple-choice" data-target="example-other-address">
-              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Home">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Home" checked="checked">
               <label for="radio-home-address">Inspection plan feedback</label>
             </div>
             <div class="multiple-choice" data-target="example-other-address">
@@ -48,6 +59,9 @@
 
                 <div><label class="form-label" for="textarea"> Please provide a message for the enquiry
                 </label>
+                    <span class="error-message">
+      You must fill in the missing information.
+    </span>
                     <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea></div>
                 <br></br>
                 <div class="form-group">

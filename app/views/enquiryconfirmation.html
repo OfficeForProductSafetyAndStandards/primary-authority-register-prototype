@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Enquiry confirmation
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Enquiry sent
+        </h1>
+        <p class="font-large">
+          Your reference number is <br>
+          <strong class="bold">HDJ2123F</strong>
+        </p>
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>Your enquiry has been sent to Propertymark Limited</p>
+      <p>They will reply to confirm your enquiry or to ask for more information. You will recieve an email notification and will be able to view the reply from a link on your dashboard.</p>
+      <form action="/search/partnership/propertymarklimited">
+
+            <input class="button" type="submit" value="Back to Partnership Information">
+
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
