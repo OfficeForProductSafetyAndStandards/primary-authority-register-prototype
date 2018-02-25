@@ -1,0 +1,66 @@
+{% extends "govuk_template.html" %}
+{% block head %}
+{% include "includes/head.html" %}
+{% endblock %}
+{% block cookie_message %}
+{% endblock %}
+{% include "includes/phase_banner_beta.html" %}
+{% block proposition_header %}
+
+  <div class="header-proposition">
+    <div class="content">
+      <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+      <nav id="proposition-menu">
+        <a href="/" id="proposition-name">
+          {# Set serviceName in config.js. Use a block to override on a page. #}
+          {% block service_name %}
+            {% if serviceName %} {{ serviceName }} {% endif %}
+          {% endblock %}
+        </a>
+
+
+        <ul id="proposition-links">
+            <li><a href="/dashboard">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;clare.scawthorn</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/login">Log out</a></li>
+        </ul>
+
+      </nav>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
+
+{% block footer_support_links %}
+  {% if useAutoStoreData %}
+    <ul>
+      <li>
+        <a href="/">Local regulation: Primary Authority</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a href="/">Terms and Conditions</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a href="/">Cookies</a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a href="/">Privacy policy</a>
+      </li>
+    </ul>
+  {% endif %}
+{% endblock %}
+
+{% block body_end %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block page_scripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype kit {{releaseVersion}} -->
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Enquiry
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "includes/breadcrumb_examples.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+
+
+        <span class="heading-secondary">Make an enquiry</span>
+        What are you enquiring about?
+      </h1>
+
+      <form>
+        <div class="form-group">
+
+              <h3 class="heading-medium">
+               Choose an option
+              </h3>
+
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-home-address" type="radio" name="radio-indent-group" value="Home">
+              <label for="radio-home-address">Inspection plan feedback</label>
+            </div>
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">Request to deviate from an inspection plan</label>
+            </div>
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">Information request</label>
+            </div>
+            <div class="multiple-choice" data-target="example-other-address">
+              <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
+              <label for="radio-other-address">General enquiry</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="example-other-address">
+
+
+                <div><label class="form-label" for="textarea"> Please provide a message for the enquiry
+                </label>
+                    <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea></div>
+                <br></br>
+                <div class="form-group">
+                    <label class="form-label" for="file-input">
+                        Upload a file
+                    </label>
+                    <input type="file" id="file-input">
+                </div>
+                <input class="button" type="submit" value="Submit">
+            </div>
+          </fieldset>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
