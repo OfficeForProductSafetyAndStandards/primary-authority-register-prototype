@@ -1,11 +1,37 @@
 {% extends "layout.html" %}
 
+{% block proposition_header %}
+<!--Dashboard for user 2-->
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="/startpage" id="proposition-name">
+        {# Set serviceName in config.js. Use a block to override on a page. #}
+        {% block service_name %}
+        {% if serviceName %} {{ serviceName }} {% endif %}
+        {% endblock %}
+      </a>
+
+
+      <ul id="proposition-links">
+        <li><a href="/dashboard">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;jamesgreenaway@warwickshire.gov.uk</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/login">Log out</a></li>
+      </ul>
+
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
+
 {% block page_title %}
   Dashboard
 {% endblock %}
 
 {% block content %}
-<!--Dashboard for user 1-->
+
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
