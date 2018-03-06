@@ -2,8 +2,12 @@
 
 {% block proposition_header %}
 <!--Dashboard for user 2-->
+<style>
+  div.right { text-align: right; }
+</style>
 <div class="header-proposition">
   <div class="content">
+
     <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
     <nav id="proposition-menu">
       <a href="/startpage" id="proposition-name">
@@ -13,7 +17,7 @@
         {% endblock %}
       </a>
 
-
+      <div class="right">
       <ul id="proposition-links">
         <li><a href="/dashboard">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;jamesgreenaway@warwickshire.gov.uk</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
@@ -21,6 +25,7 @@
       </ul>
 
     </nav>
+  </div>
   </div>
 </div>
 

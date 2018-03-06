@@ -15,7 +15,7 @@
       <h1 class="heading-xlarge">
 
 
-        <span class="heading-secondary">Make an enquiry</span>
+        <span class="heading-secondary">Make an enquiry about Propertymark Limited</span>
         What are you enquiring about?
       </h1>
 
@@ -32,7 +32,13 @@
             </div>
             <div class="multiple-choice" data-target="example-other-address">
               <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
-              <label for="radio-other-address">Request to deviate from an inspection plan</label>
+                <label class="form-label" >
+                    Request to deviate from inspection plan
+                    <span class="form-hint">
+   Reply within five days of the inspection plan being submitted
+  </span>
+                </label>
+
             </div>
             <div class="multiple-choice" data-target="example-other-address">
               <input id="radio-other-address" type="radio" name="radio-indent-group" value="Other">
@@ -52,8 +58,11 @@
                 <br></br>
                 <div class="form-group">
                     <label class="form-label" for="file-input">
-                        Upload a file
+                        Upload file(s)
                     </label>
+                    <div id="edit-files-upload--description" class="form-hint">
+                        Use Ctrl or cmd to select multiple files
+                    </div>
                     <input type="file" id="file-input">
                 </div>
                 <input class="button" type="submit" value="Submit">
