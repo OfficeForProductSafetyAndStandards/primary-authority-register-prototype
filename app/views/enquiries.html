@@ -40,13 +40,36 @@
             <!-- page-title.html.twig -->
 
             <h1 class="heading-xlarge">
-                Enquiries
+
+
+                <span class="heading-secondary">Enquiries</span>
+                Recieved
             </h1>
 
             <div class="form-group">
+                <div class="form-group js-form-item form-item js-form-type-textfield form-item-keywords js-form-item-keywords">
+                    <label for="edit-keywords" class="form-label">Search</label>
+
+
+                    <div id="edit-keywords--description" class="form-hint">
+                        Enter keyword(s), reference number or local authority
+                    </div>
+
+
+
+
+
+                    <span class="form-hint"></span>
+                    <input data-drupal-selector="edit-keywords" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" class="form-text form-control">
+
+
+
+
+
+                </div>
                 <select class="form-control" id="select-box" name="select-box">
-                    <option>Recieved</option>
-                    <option>Sent</option>
+                    <option>Date Desc</option>
+                    <option>Date Asc</option>
                 </select>
             </div>
 
@@ -58,39 +81,16 @@
 
             <div class="views-element-container"><div class="par-partnership-search js-view-dom-id-e21b7a1695236f103278351997e1af7189ab9b79b89d092d004a84710df34a6e">
 
-
-
-
-
-                <form class="views-exposed-form bef-exposed-form" data-drupal-selector="views-exposed-form-partnership-search-enforcment-flow-search-partnerships" action="/enquiries" method="get" id="views-exposed-form-partnership-search-enforcment-flow-search-partnerships" accept-charset="UTF-8">
-                    <div class="views-exposed-form-inner">
-
-                        </div>
-                        <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
-                            <div class="form-group">
-                                <span class="form-hint"></span>
-                                <input data-drupal-selector="edit-submit-partnership-search" type="submit" id="edit-submit-partnership-search" value="Sort" class="button js-form-submit form-submit">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </form>
-
-
-
                 <div class="table-scroll-wrapper">
-                    <table class="cols-5">
-                        <caption class="heading-small">
-                            Search results
-                        </caption>
+                    <table class="cols-6">
                         <thead>
                         <tr>
                             <th id="view-organisation-name-table-column" class="views-field views-field-organisation-name" scope="col">Recieved Date</th>
                             <th id="view-authority-name-table-column" class="views-field views-field-authority-name" scope="col">Type of enquiry</th>
-                            <th id="view-trading-name-table-column" class="views-field views-field-trading-name" scope="col">Enforcing authority</th>
+                            <th id="view-trading-name-table-column" class="views-field views-field-trading-name" scope="col">Enforcing Authority</th>
                             <th id="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity" scope="col">Organisation</th>
-                            <th id="view-field-premises-table-column" class="views-field views-field-field-premises" scope="col">Primary Authority</th>
+                            <th id="view-field-premises-table-column" class="views-field views-field-field-premises" scope="col">PA</th>
+                            <th id="view-field-premises-table-column" class="views-field views-field-field-premises" scope="col">Ref No.</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -102,13 +102,16 @@
                                 <div class="registered_name">Propertymark Limited</div>
                             </td>
                             <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
-                                <div><p class="address" translate="no"><span class="address-line1">London Fire and Emergency Planning Authority</span><br>
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
 
 
                             </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>0BPQVVY</a>            </td>
+
+
                         </tr>
                         <tr>
-                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>2 January 2018</a>            </td>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>09 March 2018</a>            </td>
                             <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">Request to deviate from an inspection plan</a>            </td>
                             <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Westminster City Council</a>            </td>
                             <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
@@ -119,6 +122,119 @@
 
 
                             </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>3HK6Y5U</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>02 March 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">Request to deviate from an inspection plan</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>London Borough of Hammersmith & Fulham</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Poundland Limited</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>OC7MP3C</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>14 February 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">Information Request</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Milton Keynes Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Domino's Pizza</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>LCR9TFY</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>02 February 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">General enquiry</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>West Yorkshire Trading Standards Service</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Rowland Foods Ltd</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>LKFFFTD</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>15 March 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view1">Inspection plan feedback</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Mole Valley District Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Propertymark Limited</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>IZW8OFQ</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>09 March 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">Request to deviate from an inspection plan</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Nottinghamshire County Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Rowland Foods Ltd</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>KC63WNF</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>02 March 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">General enquiry</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Hertfordshire County Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Rowland Foods Ltd</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>P6TTVWE</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>14 February 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">General enquiry</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Westminster City Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Propertymark Limited</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>FYMR7C0</a>            </td>
+                        </tr>
+                        <tr>
+                            <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>02 February 2018</a>            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a href="/enquiries/view">Information request</a>            </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a>Westminster City Council</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">
+                                <div class="registered_name">Rowland Foods Ltd</div>
+                            </td>
+                            <td headers="view-field-premises-table-column" class="views-field views-field-field-premises">
+                                <div><p class="address" translate="no"><span class="address-line1">Cherwell District Council</span><br>
+
+
+                            </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name"><span class="visually-hidden">View the partnership details for </span><a>UH6DR8Q</a>            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -132,7 +248,7 @@
                             <h4 class="pagination-heading visually-hidden">Pagination</h4>
                             <ul class="pager__items js-pager__items">
                                 <li class="pager__item pagerer-prefix">
-                                    <span aria-hidden="true" role="presentation">Showing 1-2 of 10 results</span>
+                                    <span aria-hidden="true" role="presentation">Showing 1-10 of 48 results</span>
                                 </li>
                             </ul>
                         </nav>
