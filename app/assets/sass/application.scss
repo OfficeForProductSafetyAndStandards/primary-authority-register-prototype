@@ -28,4 +28,36 @@ $path: "/public/images/";
   }
 }
 
+.pagerer-container{
+  display: inline-block;
+  margin-top: 3em;
+}
+.pagerer-container .js-pager__items{
+  float: left;
+  text-align: right;
+}
+
+.pagerer-panes{
+  display: flex;
+  flex-direction: row;
+}
+div.pagerer-container .pagerer-left-pane {
+  flex: auto;
+
+width: auto;
+}
+div.pagerer-container .pagerer-right-pane {
+    width: auto;
+}
+div.pagerer-container {
+  display: inline-table;
+  border: 0;
+  margin: 0.5em 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0;
+  width: 100%;
+}
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

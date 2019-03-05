@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+{% block proposition_header %}
+<!--This is the See enquiries page-->
+<div class="header-proposition">
+    <div class="content">
+        <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+        <nav id="proposition-menu">
+            <a href="/startpage" id="proposition-name">
+                {# Set serviceName in config.js. Use a block to override on a page. #}
+                {% block service_name %}
+                {% if serviceName %} {{ serviceName }} {% endif %}
+                {% endblock %}
+            </a>
+
+
+            <ul id="proposition-links">
+                <li><a href="/dashboard">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;jamesgreenaway@warwickshire.gov.uk</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/login">Log out</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block page_title %}
+  Advice Search
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main" tabindex="-1">
+
+        <div id="block-par-theme-page-title">
+
+
+            <!-- page-title.html.twig -->
+
+            <h1 class="heading-xlarge">
+
+
+                <span class="heading-secondary">Advice an Documentation for</span>
+                Milton Keynes Council
+            </h1>
+
+        <div id="block-par-theme-content">
+
+            <div class="views-element-container"><div class="par-partnership-search js-view-dom-id-e21b7a1695236f103278351997e1af7189ab9b79b89d092d004a84710df34a6e">
+
+                <div class="table-scroll-wrapper">
+                    <table class="cols-6">
+                        <thead>
+                        <tr>
+                            <th id="view-organisation-name-table-column" class="views-field views-field-organisation-name" scope="col">Issue Date</th>
+                            <th id="view-organisation-name-table-column" class="views-field views-field-organisation-name" scope="col">Title</th>
+                            <th id="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity" scope="col"> 	Type of document and regulatory functions</th>
+                            <th id="view-authority-name-table-column" class="views-field views-field-authority-name" scope="col">Action</th>
+                            <th id="view-field-premises-table-column" class="views-field views-field-field-premises" scope="col">Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>01 January 2017</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Edit</a> </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Active</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>04 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">Sinsburys Food Heath Review </span><a href="/enquiries/view1">Sainsburys Food Heath</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Primary Authority advice to Local Authorities covering: Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Edit</a></td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Active</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>10 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">PC World Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name">None</td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Archived</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>25 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Primary Authority advice to Local Authorities covering: Health and safety (reserved functions only)   </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Edit</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Active</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>30 April 2019</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name">None</td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Archived</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>15 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Archive</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Pending</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>15 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Edit</a></td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Active</td>
+                        </tr>
+                        <tr>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View the partnership details for </span><a>15 March 2018</a>            </td>
+                          <td headers="view-organisation-name-table-column" class="views-field views-field-organisation-name"><span class="visually-hidden">View Tesco Food Heath Review </span><a href="/enquiries/view1">Tesco Food Heath Review</a>       </td>
+                            <td headers="view-authority-name-table-column" class="views-field views-field-authority-name">Background information covering: <strong>Environmental health</strong>     </td>
+                            <td headers="view-trading-name-table-column" class="views-field views-field-trading-name"><a href="/enquiries/view1">Archive</a>            </td>
+                            <td headers="view-field-legal-entity-table-column" class="views-field views-field-field-legal-entity">Pending</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="pagerer-container">
+                    <div class="pagerer-panes">
+                        <div class="pagerer-left-pane">    <nav class="pager pagerer-pager-basic" role="navigation" aria-labelledby="pagination-heading">
+                            <h4 class="pagination-heading visually-hidden">Pagination</h4>
+                            <ul class="pager__items js-pager__items">
+                                <li class="pager__item pagerer-prefix">
+                                    <span aria-hidden="true" role="presentation">Showing 1-10 of 48 results</span>
+                                </li>
+                            </ul>
+                        </nav>
+                        </div>
+                        <div class="pagerer-center-pane"></div>
+                        <div class="pagerer-right-pane">
+                          <nav class="pager pagerer-pager-standard" role="navigation" aria-labelledby="pagination-heading">
+                            <h4 class="pagination-heading visually-hidden">Pagination</h4>
+                            <ul class="pager__items js-pager__items">
+
+                                    <a href="?keywords=&amp;page=1" title="Go to page 2">
+                                        <span class="visually-hidden">Page</span>2</a>
+
+                                    <a href="?keywords=&amp;page=2" title="Go to page 3">
+                                        <span class="visually-hidden">Page</span>3</a>
+
+                                    <a href="?keywords=&amp;page=3" title="Go to page 4">
+                                        <span class="visually-hidden">Page</span>4</a>
+
+
+                                    <a href="?keywords=&amp;page=4" title="Go to page 5">
+                                        <span class="visually-hidden">Page</span>5</a>
+
+                                    <a href="?keywords=&amp;page=1" title="Go to next page" rel="next">
+                                        <span class="visually-hidden">Next page</span>
+                                        <span aria-hidden="true">Next</span>
+                                    </a>
+
+                            </ul>
+                        </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+{% endblock %}
