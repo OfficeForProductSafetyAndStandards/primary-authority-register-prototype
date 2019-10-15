@@ -15,38 +15,9 @@ You can change the service name by editing the file '/app/config.js'.
 
 ## Show navigation in the header
 
-<<<<<<< HEAD
-Remove the comments surrounding the unordered list with an ID of proposition links.
-
-    <nav id="proposition-menu">
-      <a href="/" id="proposition-name">Service name</a>
-      <!--
-      <ul id="proposition-links">
-        <li><a href="url-to-page-1" class="active">Navigation item #1</a></li>
-        <li><a href="url-to-page-2">Navigation item #2</a></li>
-      </ul>
-      -->
-    </nav>
-
-An example of this can be seen in the [blank question page](/docs/examples/template-question-page-blank) template.
-
-## Add a phase banner
-
-Include either the alpha or beta phase banner from the `app/views/includes/` folder.
-
-### How to include an Alpha banner
-
-    {% include "includes/phase_banner_alpha.html" %}
-
-### How to include a Beta banner
-
-    {% include "includes/phase_banner_beta.html" %}
-
-
-=======
 Import the header component macro place it in the `{% block header %}`and provide `navigation` items as shown below.
 
-    {% from 'header/macro.njk' import govukHeader %}
+    {% from 'govuk/components/header/macro.njk' import govukHeader %}
 
     {% block header %}
       {{ govukHeader({
@@ -76,7 +47,7 @@ Import the phase-banner component and supply tag and feedback text. The phase ba
 
 ### How to include an Alpha banner
 
-    {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+    {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
     {{ govukPhaseBanner({
       tag: {
@@ -87,7 +58,7 @@ Import the phase-banner component and supply tag and feedback text. The phase ba
 
 ### How to include a Beta banner
 
-    {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+    {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
     {{ govukPhaseBanner({
       tag: {
@@ -95,4 +66,3 @@ Import the phase-banner component and supply tag and feedback text. The phase ba
       },
       html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
     }) }}
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95

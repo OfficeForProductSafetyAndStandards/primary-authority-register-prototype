@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-# GOV.UK Prototype kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk_prototype_kit.svg)](https://greenkeeper.io/)
-
-Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
-
-## About the prototype kit
-
-The prototype kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
-=======
-# GOV.UK Prototype Kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-prototype-kit.svg)](https://greenkeeper.io/)
+# GOV.UK Prototype Kit
 
 Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
 
 ## About the Prototype Kit
 
 The Prototype Kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/principles).
 
@@ -29,14 +19,6 @@ You must protect user privacy at all times, even when using prototypes. Prototyp
 - [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
 - [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
 
-<<<<<<< HEAD
-## Community
-
-We have two Slack channels for the Prototype kit. You'll need a government email address to join them.
-
-* [Slack channel for users of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit/)
-* [Slack channel for developers of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev/)
-=======
 ## Support
 
 The GOV.UK Prototype Kit is maintained by the Government Digital Service. If you’ve got a question or need support you can:
@@ -51,4 +33,3 @@ If you’ve got an idea or suggestion you can:
 
 * [get in touch on the developer Slack channel](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0E1063DW))
 * [create a GitHub issue](https://github.com/alphagov/govuk-prototype-kit/issues)
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95

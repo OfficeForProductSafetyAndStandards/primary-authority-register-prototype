@@ -2,11 +2,7 @@
 
 ## Download the kit as a zip
 
-<<<<<<< HEAD
-The simplest way to get the kit is to [download it as a zip](/prototype-admin/download-latest). You'll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.
-=======
 The simplest way to get the kit is to <a href="/docs/download" data-link="download">download it as a zip</a>. You'll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ### Decide where you want to keep your prototypes
 
@@ -20,25 +16,6 @@ Create a folder called `projects` in your home folder. You can open your home fo
 
 #### Windows users
 
-<<<<<<< HEAD
-Create a folder called `projects` in your `Documents` or `My Documents` folder.
-
-### Unzip the kit
-
-Unzip the kit you downloaded - you should end up with a folder called `govuk_prototype_kit-3.0.0`
-
-### Rename the kit
-
-Rename the folder to something descriptive for your prototype. For this guide, we’ll use `juggling-licence-prototype`.
-
-### Move the kit in to projects folder
-
-Move the kit in to your newly created `projects` folder.
-
-## Terminal basics
-
-The terminal (terminal on mac and linux, git bash on windows) lets you type in commands and run programs on your computer. You can also use it to browse your file system - to open folders, etc.
-=======
 Create a folder called `projects` in your `Documents` folder.
 
 ### Unzip the kit and move it
@@ -52,7 +29,6 @@ Move the folder into your `projects` folder.
 ## Terminal basics
 
 The terminal (on mac and linux, git bash on windows) lets you type in commands and run programs on your computer. You can also use it to browse your file system - to open folders, etc.
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 Learning a few basic terminal commands can make using the kit much easier.
 
@@ -61,11 +37,7 @@ Learning a few basic terminal commands can make using the kit much easier.
 
 ### Navigating to your prototype
 
-<<<<<<< HEAD
-You need to be able to navigate to your prototype from the terminal. Most commands for the kit need to be run from the prototype folder.
-=======
 You need to navigate to your prototype in the terminal. Most commands for the kit need to be run in the prototype folder.
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 #### Mac users:
 ```
@@ -73,45 +45,12 @@ cd ~/projects/juggling-licence-prototype
 ```
 
 #### Windows users:
-<<<<<<< HEAD
-
-Navigating will depend on whether you have a `Documents` or a `My Documents` folder.
-
-Documents:
-```
-cd ~/Documents/projects/juggling-licence-prototype
-```
-My Documents:
-```
-cd ~/My\ Documents/projects/juggling-licence-prototype
-```
-
-#### Returning to this folder
-
-It’s important that you be able to navigate to your prototype in the terminal - most commands will need to be run from the prototype folder.
-
-To check you’re in the right folder, you can run `ls` (list items):
-```
-ls
-```
-You should see a list of files inside the prototype, starting with `CHANGELOG.md, CONTRIBUTING.md, gulpfile.js etc`
-
-> If you don’t see these files, check that you installed the kit into the right location and named it correctly.
-
-## Install the kit
-
-### Open a terminal window
-
-If you don’t already have one open, open a terminal window and navigate to your prototype folder.
-
-=======
 ```
 cd ~/Documents/projects/juggling-licence-prototype
 ```
 
 ## Install the kit
 
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 ### Install modules
 
 You need to download extra code used by the kit before it can run. You can get this by running:

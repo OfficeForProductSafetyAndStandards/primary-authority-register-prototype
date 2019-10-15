@@ -12,9 +12,6 @@ The easiest way to clear session data is to use 'Incognito mode' for each user, 
 
 In a route function, refer to `req.session`.
 
-<<<<<<< HEAD
-For example you might have `req.session.over18` or `req.session.firstName`.
-=======
 ### Accessing fields from the session
 
 For example, when submitting the following (simplified) HTML:
@@ -91,7 +88,6 @@ Or in views as:
 {{ data['partner']['first-name'] }}
 {{ data['partner']['last-name'] }}
 ```
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 You can see a full example here:
 
@@ -99,8 +95,4 @@ You can see a full example here:
 
 You can read more about Express Session here:
 
-<<<<<<< HEAD
 [https://github.com/expressjs/session](https://github.com/expressjs/session)
-=======
-[https://github.com/expressjs/session](https://github.com/expressjs/session)
->>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
