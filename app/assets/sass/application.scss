@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Path to assets for use with the file-url function
 // in the govuk frontend toolkit's url-helpers partial
 $path: "/public/images/";
@@ -59,5 +60,20 @@ div.pagerer-container {
   width: 100%;
 }
 
+=======
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Components that aren't in Frontend
+@import "components/cookie-banner";
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Path to assets for use with the file-url function
 // in the govuk frontend toolkit's url-helpers partial
 $path: "/public/images/";
@@ -28,3 +29,29 @@ $toolkit-font-stack: $helvetica-regular;
     background: $white;
   }
 }
+=======
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/examples/blank-unbranded
+
+// Import colour palette and applied colours so that we can use
+// $govuk-body-background-colour in our overrides below.
+// 
+// If you need to enable compatibility mode or the legacy palette, do that
+// *before* these imports.
+@import "node_modules/govuk-frontend/settings/colours-palette";
+@import "node_modules/govuk-frontend/settings/colours-applied";
+
+// Style links and paragraphs by default
+$govuk-global-styles: true;
+
+// Override the govuk-frontend font stack
+$govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with
+// the GOV.UK footer.
+$govuk-canvas-background-colour: $govuk-body-background-colour;
+
+@import "node_modules/govuk-frontend/all";
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95

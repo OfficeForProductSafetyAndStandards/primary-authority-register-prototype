@@ -4,12 +4,26 @@ The kit runs on Mac, Windows and Linux. At a minimum you’ll need `node.js` (in
 
 This guide recommends additional software which will be used in later guides.
 
+<<<<<<< HEAD
 ## Admin access
 
 If you have admin access to your machine, you can follow this guide to install the required software.
 
 If you do not have admin access, ask your computer administrator to install:
 * Node.js 6.x.x
+=======
+## Software you need
+
+You'll usually need admin access to your machine to install the software.
+
+If you do not have admin access, ask your IT team to install the software for you.
+
+GDS staff can install the software themselves with Managed Software Centre (MSC).
+
+You'll need:
+
+* Node.js 10.x.x
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 * Atom (text editor)
 * Command line tools (Mac)
 * Git bash (Windows)
@@ -43,9 +57,15 @@ command to be typed in to terminal
 Once you’ve typed the command, press enter to send it.
 
 
+<<<<<<< HEAD
 ## Node.js version 6 LTS
 
 The kit is designed to work with Node.js version 6 LTS. The kit works with any 6.x.x version.
+=======
+## Node.js version 10 LTS
+
+The kit is designed to work with Node.js version 10 LTS. The kit works with any 10.x.x version.
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ### Check if you have Node.js
 
@@ -55,22 +75,36 @@ node --version
 ```
 If it says `command not found` or `Error 0x2 starting node.exe --version` you don’t have node and will need to download and install it.
 
+<<<<<<< HEAD
 If the version number starts with 6 you have the correct version installed.
 
 If it says another number such as `0.12` or `5.x.x`, you need to download and install version 6.
+=======
+If the version number starts with 10 you have the correct version installed.
+
+If it says another number such as `0.12` or `5.x.x`, you need to download and install version 10.
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ### Download and install Node.js
 
 #### Mac / Windows users
 
+<<<<<<< HEAD
 Download version 6 from [nodejs.org](https://nodejs.org/en/).
+=======
+Download version 10 from [nodejs.org](https://nodejs.org/en/).
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 Run the installer with all default options.
 
 #### Linux users
 
 Follow the instructions on the [Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+<<<<<<< HEAD
 ) site. Make sure you get version 6, not 7.
+=======
+) site. Make sure you get version 10.
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ### Once Node is installed
 
@@ -81,7 +115,11 @@ To check it is installed correctly you can again run:
 node --version
 ```
 
+<<<<<<< HEAD
 If it’s installed correctly it should show a number starting with 6.
+=======
+If it’s installed correctly it should show a number starting with 10.
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ## Atom (text editor)
 

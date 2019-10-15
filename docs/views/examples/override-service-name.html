@@ -1,15 +1,29 @@
 {% extends "layout.html" %}
 
+<<<<<<< HEAD
 {% block page_title %}
   GOV.UK prototype kit - override service name
 {% endblock %}
 
 {% block service_name %}
   Report a smokey vehicle
+=======
+{% block pageTitle %}
+  GOV.UK Prototype Kit - override service name
+{% endblock %}
+
+{% set serviceName %}
+  Report a smokey vehicle
+{% endset %}
+
+{% block beforeContent %}
+  {% include "includes/breadcrumb_examples.html" %}
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 {% endblock %}
 
 {% block content %}
 
+<<<<<<< HEAD
 <main id="content" role="main">
 
   {% include "includes/breadcrumb_examples.html" %}
@@ -18,6 +32,12 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
+=======
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
         Override service name
       </h1>{{releaseVersion | log }}
       <p>
@@ -28,6 +48,7 @@
         Use this code:
       </p>
 
+<<<<<<< HEAD
         <div class="code">
           {% raw %}
   {% block service_name %}
@@ -39,5 +60,13 @@
     </div>
   </div>
 </main>
+=======
+      <pre class="app-code"><code>{% raw %}{% set serviceName %}
+  Report a smokey vehicle
+{% endset%}{% endraw %}</code></pre>
+
+    </div>
+  </div>
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 {% endblock %}

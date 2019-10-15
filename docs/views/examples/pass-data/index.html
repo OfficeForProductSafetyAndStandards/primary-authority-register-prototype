@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 
+<<<<<<< HEAD
 {% block page_title %}
   Example - Passing data
 {% endblock %}
@@ -13,6 +14,22 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">
+=======
+{% block pageTitle %}
+  Example - Passing data
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/breadcrumb_examples.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
         Passing data from page to page
       </h1>
 
@@ -29,6 +46,7 @@
       </p>
 
       <p>
+<<<<<<< HEAD
         The code for the example is in this folder in the prototype kit:
       </p>
 
@@ -40,11 +58,20 @@
       </pre>
 
       <h2 class="heading-medium">How to use</h2>
+=======
+        The code for the example is in this folder in the Prototype Kit:
+      </p>
+
+      <pre class="app-code"><code>/docs/views/examples/pass-data</code></pre>
+
+      <h2 class="govuk-heading-m">How to use</h2>
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
       <p>The kit stores data from inputs using the name attribute of the input.</p>
 
       <p>For example, if you have this input:</p>
 
+<<<<<<< HEAD
       <pre>
 <div class="code">
   &lt;input name="first-name"&gt;
@@ -63,6 +90,19 @@
 
 
       <h3 class="heading-small">
+=======
+      <pre class="app-code"><code>&lt;input name="first-name"&gt;</code></pre>
+
+      <p>You can show what the user entered later on like this:</p>
+
+      <pre class="app-code"><code>&lt;p&gt;{%raw%}{{ data['first-name'] }}{%endraw%}&lt;/p&gt;</code></pre>
+
+      <p>Or with nested fields:</p>
+
+      <pre class="app-code"><code>&lt;p&gt;{%raw%}{{ data['claimant']['first-name'] }}{%endraw%}&lt;/p&gt;</code></pre>
+
+      <h3 class="govuk-heading-s">
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
         Clearing data
       </h3>
 
@@ -70,7 +110,11 @@
         To clear the data (for example at the end of a user research session) click the "Clear data" link in the footer.
       </p>
 
+<<<<<<< HEAD
       <h3 class="heading-small">
+=======
+      <h3 class="govuk-heading-s">
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
         Showing answers in inputs
       </h3>
 
@@ -79,6 +123,7 @@
       </p>
 
       <p>For a text input:</p>
+<<<<<<< HEAD
       <pre>
 <div class="code">
   &lt;input name="first-name" value="{%raw%}{{ data['first-name'] }}{%endraw%}"&gt;
@@ -110,11 +155,134 @@
       </pre>
 
       <h3 class="heading-small">
+=======
+
+      <pre class="app-code"><code>&lt;input name="first-name" value="{%raw%}{{ data['first-name'] }}{%endraw%}"&gt;</code></pre>
+
+      <p>For a radio or checkbox input you need to use the 'checked' function:</p>
+
+      <pre class="app-code"><code>&lt;input type="radio" name="over-18" value="yes" {%raw%}{{ checked("over-18", "yes") }}{%endraw%}&gt;</code></pre>
+
+      <p>Or with nested fields:</p>
+
+      <pre class="app-code"><code>&lt;input type="radio" name="claimant[over-18]" value="yes" {%raw%}{{ checked("['claimant']['over-18']", "yes") }}{%endraw%}&gt;</code></pre>
+
+      <h3 class="govuk-heading-s">
+        Setting default data
+      </h3>
+
+      <p>You can set default values in this file in your prototype folder:
+
+      <pre class="app-code"><code>app/data/session-data-defaults.js</code></pre>
+
+      <h2 class="govuk-heading-m">Advanced features</h2>
+
+      <h3 class="govuk-heading-s">
+        Using the data in Nunjucks macros
+      </h3>
+
+      <p>Example using the 'checked' function in a checkbox component macro:</p>
+
+<pre class="app-code"><code>{% raw %}
+{{ govukCheckboxes({
+  name: "vehicle-features",
+  fieldset: {
+    legend: {
+      text: "Which of these applies to your vehicle?"
+    }
+  },
+  hint: {
+    text: "Select all that apply"
+  },
+  items: [
+    {
+      value: "Heated seats",
+      text: "Heated seats",
+      id: "vehicle-features-heated-seats",
+      checked: checked("vehicle-features", "Heated seats")
+    },
+    {
+      value: "GPS",
+      text: "GPS",
+      id: "vehicle-features-gps",
+      checked: checked("vehicle-features", "GPS")
+    },
+    {
+      value: "Radio",
+      text: "Radio",
+      id: "vehicle-features-radio",
+      checked: checked("vehicle-features", "Radio")
+    }
+  ]
+}) }}
+{% endraw %}</code></pre>
+
+      <h3 class="govuk-heading-s">
+        Using the data in Nunjucks macros (nested fields)
+      </h3>
+
+      <p>Example using the 'checked' function in a checkbox component macro (nested fields for multiple vehicles):</p>
+
+<pre class="app-code"><code>{% raw %}
+{{ govukCheckboxes({
+  name: "vehicle1[vehicle-features]"
+  fieldset: {
+    legend: {
+      text: "Which of these applies to your vehicle?"
+    }
+  },
+  hint: {
+    text: "Select all that apply"
+  },
+  items: [
+    {
+      value: "Heated seats",
+      text: "Heated seats",
+      id: "vehicle1-vehicle-features-heated-seats",
+      checked: checked("['vehicle1']['vehicle-features']", "Heated seats")
+    },
+    {
+      value: "GPS",
+      text: "GPS",
+      id: "vehicle1-vehicle-features-gps",
+      checked: checked("['vehicle1']['vehicle-features']", "GPS")
+    },
+    {
+      value: "Radio",
+      text: "Radio",
+      id: "vehicle1-vehicle-features-radio",
+      checked: checked("['vehicle1']['vehicle-features']", "Radio")
+    }
+  ]
+}) }}
+{% endraw %}</code></pre>
+
+      <h3 class="govuk-heading-s">
+        Using the data on the server
+      </h3>
+
+      <p>You can access the data on the server in a route function</p>
+
+      <p>For example for an input with name="first-name":</p>
+
+      <pre class="app-code"><code>var firstName = req.session.data['first-name']</code></pre>
+
+      <h3 class="govuk-heading-s">
+        Using the data on the server (nested fields)
+      </h3>
+
+      <p>For example for an input with name="claimant[first-name]":</p>
+
+      <pre class="app-code"><code>var firstName = req.session.data['claimant']['first-name']</code></pre>
+
+      <h3 class="govuk-heading-s">
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
         Ignoring inputs
       </h3>
 
       <p>To prevent an input being stored, use an underscore at the start of the name.</p>
 
+<<<<<<< HEAD
       <pre>
 <div class="code">
   &lt;input name="_secret"&gt;
@@ -125,4 +293,10 @@
     </div>
   </div>
 </main>
+=======
+      <pre class="app-code"><code>&lt;input name="_secret"&gt;</code></pre>
+
+    </div>
+  </div>
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 {% endblock %}

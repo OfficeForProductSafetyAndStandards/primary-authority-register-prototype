@@ -1,5 +1,6 @@
 # Instructions for developers
 
+<<<<<<< HEAD
 It's built on the [Express](http://expressjs.com/) framework, and uses these GOV.UK resources:
 
 - [GOV.UK template](https://github.com/alphagov/govuk_template)
@@ -9,6 +10,13 @@ It's built on the [Express](http://expressjs.com/) framework, and uses these GOV
 ## Requirements
 
 node.js - version 6.x.x
+=======
+It's built on the [Express](http://expressjs.com/) framework, and uses [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend).
+
+## Requirements
+
+node.js - version 10.x.x
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 
 ## Install dependencies
 

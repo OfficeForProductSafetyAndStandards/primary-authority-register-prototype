@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
+<<<<<<< HEAD
 Documentation - GOV.UK Prototype kit
 {% endblock %}
 
@@ -27,3 +28,32 @@ Documentation - GOV.UK Prototype kit
 </main>
 
 {% endblock %}
+=======
+Documentation - GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+	{{ govukBreadcrumbs({
+	  items: [
+	    {
+	      text: "GOV.UK Prototype Kit",
+	      href: "/docs"
+	    },
+	    {
+	      text: "Tutorials and examples",
+	      href: "/docs/tutorials-and-examples"
+	    }
+	  ]
+	}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="app-prose-scope">
+        {{document | safe}}
+      </div>
+    </div>
+  </div>
+{% endblock %}
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95

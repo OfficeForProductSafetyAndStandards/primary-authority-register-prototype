@@ -1,11 +1,21 @@
+<<<<<<< HEAD
+=======
+# ignore tracking usage data config - we want a different one for each user
+usage-data-config.json
+# ignore extension SCSS because it's dynamically generated
+lib/extensions/_extensions.scss
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 .env
 .sass-cache
 .DS_Store
 .start.pid
 .port.tmp
 public
+<<<<<<< HEAD
 lib/govuk_template.html
 govuk_modules
+=======
+>>>>>>> 7dfe394cc9d3042db4ebabfd67b35a61c3048f95
 node_modules/*
 .tmuxp.*
 package-lock.json
