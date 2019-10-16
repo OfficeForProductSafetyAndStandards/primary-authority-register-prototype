@@ -1,4 +1,6 @@
-# GOV.UK Prototype Kit
+# BEIS Primary Authority Register Prototype Kit
+
+This prototype uses the GOV.UK Prototype Kit.
 
 Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
 
