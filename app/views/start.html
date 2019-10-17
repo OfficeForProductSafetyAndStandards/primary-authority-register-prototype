@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+About Primary Authority
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Primary Authority Register
+            <span class="govuk-caption-xl">v1.0.0</span>
+        </h1>
+
+        <p>
+            Primary Authority is a different way of delivering local regulation, enabling local authorities to help
+            businesses comply with regulations.</p>
+        <p>
+            For more information about how Primary Authority works, read <a href="#">Primary Authority: an
+            overview.</a></p>
+        <p>Find out which businesses are in a Primary Authority by visiting the <a href="#">Primary Authority
+            Register.</a></p>
+        <p>For useful documents for local authorities using Primary Authority, visit <a href="#">Primary Authority
+            Documents.</a></p>
+
+        <p>Login to the Primary Authority Register</p>
+        <p>
+            <a href="/dashboard" role="button" draggable="false"
+               class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+               data-module="govuk-button">
+                Start now
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+                     viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                </svg>
+            </a>
+        </p>
+
+
+    </div>
+
+
+    <div class="govuk-grid-column-full">
+        <aside class="app-related-items" role="complementary">
+            <h2 class="govuk-heading-m" id="subsection-title">
+                Don't have an account?
+            </h2>
+            <p>
+                If you are a local authority and don't have an account please call 0121 345 1201 or e-mail <a href="#">pa@beis.gov.uk</a>.
+            </p>
+
+            <p>
+                If you’re a business interested in setting up a Primary Authority Partnership, please contact BEIS on
+                0121 345 1201 or email <a href="#">pa@beis.gov.uk</a> and we will be more than happy to provide relevant
+                information and guide you through the process.
+            </p>
+
+            <p>
+                For more information about how Primary Authority works, read Primary Authority: an overview.
+            </p>
+        </aside>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,42 +1,11 @@
 {% extends "layout.html" %}
 
-{% block proposition_header %}
-<!--Dashboard for user 2-->
-<style>
-  div.right { text-align: right; }
-</style>
-<div class="header-proposition">
-  <div class="content">
-
-    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-    <nav id="proposition-menu">
-      <a href="/startpage" id="proposition-name">
-        {# Set serviceName in config.js. Use a block to override on a page. #}
-        {% block service_name %}
-        {% if serviceName %} {{ serviceName }} {% endif %}
-        {% endblock %}
-      </a>
-
-      <div class="right">
-      <ul id="proposition-links">
-        <li><a href="/dashboard">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;jamesgreenaway@warwickshire.gov.uk</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/login">Log out</a></li>
-      </ul>
-
-    </nav>
-  </div>
-  </div>
-</div>
-
-{% endblock %}
-
 {% block page_title %}
   Dashboard
 {% endblock %}
 
 {% block content %}
-
+<!--Dashboard for user 1-->
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -90,7 +59,7 @@
               <legend>
                 <h3 class="heading-medium fieldset-legend">Messages</h3>          </legend>
 
-              <p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/sent">See enforcement notifications sent</a></p><p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/received">See enforcement notifications received</a></p>
+              <p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/sent">See enforcement notifications recieved</a></p><p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/received">See enforcement notifications sent</a></p>
             <p><a href="/enquiries">See enquiries received</a>(3)</p>
             <p><a href="/enquiries">See enquiries sent</a></p>
 

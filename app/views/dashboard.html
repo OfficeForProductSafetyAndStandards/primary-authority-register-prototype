@@ -1,78 +1,35 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Dashboard
+About Primary Authority
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
 {% endblock %}
 
 {% block content %}
-<!--Dashboard for user 1-->
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
 
-      <div>
-
-        </div>
-        <div id="block-par-theme-page-title" class="contextual-region">
-
-          <div data-contextual-id="block:block=par_theme_page_title:langcode=en" class="contextual" role="form"><button class="trigger focusable visually-hidden" type="button" aria-pressed="false">Open  configuration options</button><ul class="contextual-links" hidden=""><li class="block-configure"><a href="/admin/structure/block/manage/par_theme_page_title?destination=dashboard">Configure block</a></li></ul></div>
-          <!-- page-title.html.twig -->
-
-          <h1 class="heading-xlarge">
-
-
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
             Primary Authority Register
-          </h1>
+        </h1>
 
-          <!-- ends page-title.html.twig -->
+        <div>
+            <h3 class="govuk-heading-m">Partnerships</h3>
 
-        </div>
-        <div id="block-par-theme-content">
-
-
-          <div>
-
-
-                <h3 class="heading-medium fieldset-legend">Your partnerships</h3>          </legend>
-
-              <p><a href="https://staging-cdn.par-beta.co.uk/partnership/apply">See your partnerships</a></p>
-                <p><a href="https://staging-cdn.par-beta.co.uk/partnership/apply">See pending applications</a></p>
-                <p><a href="https://staging-cdn.par-beta.co.uk/partnership/apply">Apply for a new partnership</a></p>
-
-            </fieldset>
-
-          </div>
-
-          <div>
-
-              <legend>
-                <h3 class="heading-medium fieldset-legend">Find a partnership</h3>          </legend>
-
-              <p>Search for active partnerships to check advice and raise notice of enforcement action.</p><p><a href="/search/searchhome">Search for a partnership</a></p>
-
-            </fieldset>
-
-          </div>
-
-          <div>
-
-              <legend>
-                <h3 class="heading-medium fieldset-legend">Messages</h3>          </legend>
-
-              <p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/sent">See enforcement notifications recieved</a></p><p><a href="https://staging-cdn.par-beta.co.uk/enforcement-notices/received">See enforcement notifications sent</a></p>
-            <p><a href="/enquiries">See enquiries received</a>(3)</p>
-            <p><a href="/enquiries">See enquiries sent</a></p>
-
-            </fieldset>
-
-          </div>
-
+            <p>
+                <a href="partnerships/manage/partnership">Manage partnerships</a>
+            </p>
         </div>
 
-      </div>
 
     </div>
-  </div>
-</main>
+</div>
 
 {% endblock %}
