@@ -15,57 +15,69 @@ About Primary Authority
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">
             Primary Authority Register
         </h1>
 
-        <p>
-            Primary Authority is a different way of delivering local regulation, enabling local authorities to help
-            businesses comply with regulations.</p>
-        <p>
-            For more information about how Primary Authority works, read <a href="#">Primary Authority: an
-            overview.</a></p>
-        <p>Find out which businesses are in a Primary Authority by visiting the <a href="#">Primary Authority
-            Register.</a></p>
-        <p>For useful documents for local authorities using Primary Authority, visit <a href="#">Primary Authority
-            Documents.</a></p>
+        <div>
+            <p>This secure service supports the operation of Primary Authority, which allows businesses to receive assured and tailored advice on meeting regulations through direct or co-ordinated partnerships with local authorities, including fire and rescue authorities.</p>
+            <p>Local regulators can use this service to view, share or manage information on these partnerships, guiding enforcement work across the UK, while businesses or organisations representing them can view the details of their specific partnerships.</p>
+        </div>
 
-        <p>Login to the Primary Authority Register</p>
-        <p>
-            <a href="/login" role="button" draggable="false"
-               class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
-               data-module="govuk-button">
+        <div>
+            <p>Local authorities must use this service to:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li><p>apply to nominate partnerships</p></li>
+                <li><p>notify primary authorities of proposed enforcement actions against businesses in partnerships</p></li>
+                <li><p>submit and publish inspection plans</p></li>
+            </ul>
+        </div>
+
+        <div class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+            <a href="/login" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
                 Start now
-                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
-                     viewBox="0 0 33 40" role="presentation" focusable="false">
-                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+                <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+                    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
                 </svg>
             </a>
-        </p>
+        </div>
 
+        <div>
+            <h2 class="govuk-heading-m">
+                Before you start
+            </h2>
 
+            <div>
+                <p>To get access to the Primary Authority Register:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li><p>local regulators should contact the local administrator at their local authority</p></li>
+                    <li><p>local authorities should call 0121 345 1201 or email <a class="govuk-link" href="#">pa@beis.gov.uk</a></p></li>
+                    <li><p>businesses or organisations representing them need to be in a partnership</p></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>Businesses interested in joining a partnership can call 0121 345 1201 or email <a class="govuk-link" href="#">pa@beis.gov.uk</a> to be guided through the process.</p>
+            </div>
+        </div>
     </div>
 
+    <div class="govuk-grid-column-one-third">
 
-    <div class="govuk-grid-column-full">
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
         <aside class="app-related-items" role="complementary">
             <h2 class="govuk-heading-m" id="subsection-title">
-                Don't have an account?
+                Resources
             </h2>
-            <p>
-                If you are a local authority and don't have an account please call 0121 345 1201 or e-mail <a href="#">pa@beis.gov.uk</a>.
-            </p>
-
-            <p>
-                If you’re a business interested in setting up a Primary Authority Partnership, please contact BEIS on
-                0121 345 1201 or email <a href="#">pa@beis.gov.uk</a> and we will be more than happy to provide relevant
-                information and guide you through the process.
-            </p>
-
-            <p>
-                For more information about how Primary Authority works, read Primary Authority: an overview.
-            </p>
+            <nav role="navigation" aria-labelledby="subsection-title">
+                <ul class="govuk-list govuk-!-font-size-16">
+                    <li><a class="govuk-link" href="#">Read more about Primary Authority</a> – GOV.UK website</li>
+                    <li><a class="govuk-link" href="#">Access tools and templates for local authorities</a> – GOV.UK website</li>
+                    <li><a class="govuk-link" href="#">Search the public list of partnerships</a></li>
+                </ul>
+            </nav>
         </aside>
 
     </div>
