@@ -2,6 +2,15 @@
 
 The prototype is deployed onto PaaS at the following URL https://beis-par-prototype.cloudapps.digital/
 
+## Start the local environment
+
+To start the local environment run:
+
+```
+npm install
+npm start
+```
+
 ## Deploy an updated tag
 
 To deploy a new version of the prototype tag it first using semver:

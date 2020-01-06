@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Regenerate backup code
+      </h1>
+
+      <form action="/login/terms" method="post" class="form">
+        <div class="govuk-form-group">
+          <p>Backup codes can only be used once. A new backup code has been generated for you.</p>
+        </div>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Please make sure you copy this and store it in a safe place.
+          </strong>
+        </div>
+
+
+        <div class="govuk-form-group govuk-inset-text">
+          <p class="govuk-body govuk-!-font-size-48">497632</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <p>Backup codes can only be used once.</p>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Sign in
+      </h1>
+
+      <form action="/login/verify" method="post" class="form">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Enter your e-mail address
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="pass">
+            Enter your password
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="pass" name="pass" type="text">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Sign in
+        </button>
+
+        <div>
+          <p>
+            <a href="/login/password">Forgotten your password?</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="govuk-heading-l">Don't have an account?</h2>
+          <p>If you are a local authority and don't have an account please call 0121 345 1201 or e-mail <a href="#">pa@beis.gov.uk</a></p>
+          <p>If you’re a business interested in setting up a Primary Authority Partnership, please contact BEIS on 0121 345 1201 or email <a href="#">pa@beis.gov.uk</a> and we will be more than happy to provide relevant information and guide you through the process.</p>
+          <p>For more information about how Primary Authority works, read <a href="#">Primary Authority: an overview</a>.</p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Reset your password
+      </h1>
+
+      <form action="/login" method="post" class="form">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Enter your e-mail address
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="name" name="name" type="text">
+        </div>
+
+        <div>
+          <p>Password reset instructions will be sent to your registered email address.</p>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

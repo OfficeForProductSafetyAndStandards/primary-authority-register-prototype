@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        Authenticator application
+      </h1>
+
+      <form action="/login/terms" method="post" class="form">
+        <div class="govuk-form-group">
+          <p>Please enter the security code provided by your authenticator application.</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            Enter the security code
+          </label>
+          <input class="govuk-input govuk-input--width-5" id="name" name="name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Remember me for 7 days
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Verify
+          </button>
+        </div>
+
+        <div class="govuk-form-group">
+          <p>Can't access authenticator application? Try another option</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="/login/verify">Use a text message</a></li>
+            <li><a class="govuk-link" href="/login/verify/backup-code">Use backup code</a></li>
+          </ul>
+        </div>
+
+        <div class="govuk-form-group">
+          <p>Still having trouble? <a class="govuk-link" href="#">contact the helpdesk</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
