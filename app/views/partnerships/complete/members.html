@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Complete partnership application</span>
+        Would you like to upload your members list?
+      </h1>
+
+      <form action="/partnerships/complete/index" method="post" class="form">
+        <div class="govuk-form-group">
+          <div class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <!-- Upload member list -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="member-list-upload" name="member-list" type="radio" value="no" data-aria-controls="conditional-member-list-upload">
+                <label class="govuk-label govuk-radios__label" for="member-list-none">
+                  Yes
+                </label>
+                <span id="member-list-upload-hint" class="govuk-hint govuk-radios__hint">
+                  I have a list of members I would like to upload
+                </span>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-member-list-upload">
+                <div class="govuk-form-group">
+                  <div>
+                    <h3 class="govuk-heading-m">How to upload a list of members</h3>
+                  </div>
+                  <div>
+                    <p>To upload a list of members you must provide the information in comma sepparated value (CSV) format. You can read more about preparing a CSV file on the <em class="placeholder"><a href="#" target="_blank">Member Guidance Page</a></em>. If you need assistance please contact pa@beis.gov.uk</p>
+                  </div>
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="upload">
+                    <h3 class="govuk-heading-m">Upload a list of members</h3>
+                  </label>
+                  <span id="sequenced-partnership-hint" class="govuk-hint govuk-radios__hint">
+                    Upload your CSV file, be sure to make sure the information is accurate so that it can all be processed.
+                  </span>
+                  <input class="govuk-file-upload" id="upload" name="upload" type="file">
+                </div>
+              </div>
+              <!-- Enter number of members -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="member-list-none" name="member-list" type="radio" value="no" data-aria-controls="conditional-member-list-none">
+                <label class="govuk-label govuk-radios__label" for="member-list-none">
+                  No
+                </label>
+                <span id="bespoke-partnership-hint" class="govuk-hint govuk-radios__hint">
+                  This is an un-registered organisation such as a sole trader
+                </span>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-member-list-none">
+
+                <div class="govuk-form-group">
+                  <label class="govuk-heading-m" for="member-count">
+                    How many members do you have?
+                  </label>
+                  <span id="about-hint" class="govuk-hint">
+                    Enter the number of members covered by this partnership.
+                  </span>
+                  <input class="govuk-input govuk-input--width-5" id="member-count" name="member-count" type="text">
+                </div>
+                <div class="govuk-form-group">
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="edit-confirm" name="waste" type="checkbox" value="on">
+                      <label class="govuk-label govuk-checkboxes__label" for="edit-confirm">
+                        I confirm that I can provide a list of members on request.
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -10,7 +10,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
-        Are you authorised to approve this partnership?
+        Approve partnership
       </h1>
 
       <form action="/partnerships/manage" method="post" class="form">
@@ -27,7 +27,7 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h3 class="govuk-fieldset__heading">
-                Partnership between
+                Are you authorised to approve this partnership?
               </h3>
             </legend>
             <div class="govuk-checkboxes govuk-checkboxes--small">
@@ -49,33 +49,14 @@
               </h3>
             </legend>
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <!-- Normal partnerships (one partnership only) -->
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="partnership-regulatory-functions-normal" name="partnership-regulatory-functions" type="radio" value="email" checked data-aria-controls="conditional-partnership-regulatory-functions-normal">
-                <label class="govuk-label govuk-radios__label" for="partnership-regulatory-functions-normal">
-                  Normal
-                </label>
-                <span id="normal-partnership-hint" class="govuk-hint govuk-radios__hint">
-                  Organisations with only one partnership should be treated as normal partnerships and will take on all the regulatory functions offered by the authority.
-                </span>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-partnership-regulatory-functions-normal">
-                <div class="govuk-form-group">
-                  <ul class="govuk-list govuk-list--bullet">
-                    <li><p>Health & Safety</p></li>
-                    <li><p>Environmental Health</p></li>
-                    <li><p>Fire Safety</p></li>
-                  </ul>
-                </div>
-              </div>
               <!-- Sequenced partnerships (more than one partnership) -->
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="partnership-regulatory-functions-sequenced" name="partnership-regulatory-functions" type="radio" value="email" data-aria-controls="conditional-partnership-regulatory-functions-sequenced">
                 <label class="govuk-label govuk-radios__label" for="partnership-regulatory-functions-sequenced">
-                  Sequenced
+                  Default
                 </label>
                 <span id="sequenced-partnership-hint" class="govuk-hint govuk-radios__hint">
-                  Sequenced partnerships should only be selected when a business wishes to enter into a partnership with more than one local authority and the regulatory functions of those local authorities <i>do not</i> overlap.
+                  Either for <strong>normal partnerships</strong>, where the organisation only has one partnership, or for <strong>sequenced partnerships</strong>, where a business wishes to enter into a partnership with more than one local authority and the regulatory functions of those local authorities <i>do not</i> overlap.
                 </span>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-partnership-regulatory-functions-sequenced">
@@ -94,7 +75,7 @@
                   Bespoke
                 </label>
                 <span id="bespoke-partnership-hint" class="govuk-hint govuk-radios__hint">
-                  Bespoke partnerships should only be selected when a business wishes to enter into a partnership with more than one local authority and the regulatory functions of those local authorities overlap.
+                  <strong>Bespoke partnerships</strong> should only be selected when a business wishes to enter into a partnership with more than one local authority and the regulatory functions of those local authorities overlap.
                 </span>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-partnership-regulatory-functions-bespoke">

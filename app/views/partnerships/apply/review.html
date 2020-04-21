@@ -1,0 +1,108 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">New partnership application</span>
+        Check partnership information
+      </h1>
+
+      <form action="/index" method="post" class="form">
+        <div class="govuk-form-group">
+          <div>
+            <h2 class="govuk-heading-m">About the partnership</h2>
+          </div>
+          <div>
+            <p>Some information entered about the partnerhsip.</p>
+            <p>
+              <a href="#about" class="flow-link">Change description of this partnership</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <div>
+              <h2 class="govuk-heading-m">Organisation name</h2>
+              <p>Trade Organisation</p>
+              <p><a href="#organisation" class="flow-link">Change this organisation</a></p>
+            </div>
+
+            <div>
+              <h2 class="govuk-heading-m">
+                Organisation address
+              </h2>
+              <p>
+                Organisation Headquarters, The Boulevard, Business Road, SW11 5TG, United Kingdom
+              </p>
+            </div>
+
+            <div>
+              <h2 class="govuk-heading-m">
+                Contact at the organisation
+              </h2>
+              <div>
+                <p>Mr John Smith</p>
+                <p>01234 567 890</p>
+                <p><a href="#">john@example.com</a> (preferred)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <div>
+              <h2 class="govuk-heading-m">Primary authority name</h2>
+              <p>Test Authority</p>
+              <p><a href="#authority" class="flow-link">Change the authority</a></p>
+            </div>
+
+            <div>
+              <h2 class="govuk-heading-m">
+                Contact at the authority
+              </h2>
+              <div>
+                <p>Ms Joanne Johnson</p>
+                <p>01234 567 890</p>
+                <p><a href="#">joanne@example.com</a> (preferred)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="edit-confirm" name="waste" type="checkbox" value="on">
+              <label class="govuk-label govuk-checkboxes__label" for="edit-confirm">
+                I have read and agree to the <a href="#">terms &amp; conditions (opens in a new window)</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <div>
+            <p>Please check everything is correct, once you submit these details they will be sent to the organisation to confirm and you won't be able to change many of these details.</p>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

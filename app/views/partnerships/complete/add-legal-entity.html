@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Complete partnership application</span>
+        What entity would you like to add?
+      </h1>
+
+      <form action="/partnerships/complete/add-legal-entity-registered" method="post" class="form">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="name">
+            <h2 class="govuk-heading-m">
+              Enter the legal entity name
+            </h2>
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="name" name="name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

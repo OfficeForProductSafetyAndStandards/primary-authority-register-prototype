@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Complete partnership application</span>
+        Are any additional legal entities covered by this partnership?
+      </h1>
+
+      <form action="/partnerships/complete/additional-legal-entities-process" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-additional-legal-entities-yes" name="additional-legal-entities" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="edit-additional-legal-entities-yes">
+                  Yes, add another legal entity
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-additional-legal-entities-no" name="additional-legal-entities" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="edit-additional-legal-entities-no">
+                  No, all legal entities are correct
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <div>
+              <h2 class="govuk-heading-m">Primary legal entity</h2>
+            </div>
+            <div>
+              <p>Test Organisation (123456), Public Limited Company</p>
+              <p>Organisation Headquarters, The Boulevard, Business Road, SW11 5TG, United Kingdom</p>
+              <p>
+                <a href="#about" class="flow-link">Change the primary legal entity</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <div>
+              <h2 class="govuk-heading-m">Additional legal entities</h2>
+            </div>
+            <div>
+              <p>Test Organisation (123456), Public Limited Company</p>
+              <p>Organisation Headquarters, The Boulevard, Business Road, SW11 5TG, United Kingdom</p>
+              <p>
+                <a href="#about" class="flow-link">Change the legal entity</a>
+              </p>
+              <p>
+                <a href="#about" class="flow-link">Remove the legal entity</a>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

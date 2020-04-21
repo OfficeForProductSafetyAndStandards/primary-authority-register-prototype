@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">New partnership application</span>
+        Add a contact for the organisation
+      </h1>
+
+      <form action="/partnerships/apply/review" method="post" class="form">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="title">
+            Enter the title (optional)
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="title" name="title" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="first-name">
+            Enter the first name
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="first-name" name="first-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-name">
+            Enter the last name
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="last-name" name="last-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="work-number">
+            Enter the work phone number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="work-number" name="work-number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="mobile-number">
+            Enter the mobile phone number (optional)
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="mobile-number" name="mobile-number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Enter the email address
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="email" name="email" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

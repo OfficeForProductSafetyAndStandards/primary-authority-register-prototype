@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Complete partnership application</span>
+        Enter the trading names
+      </h1>
+
+      <form action="/partnerships/complete/additional-legal-entities" method="post" class="form">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Enter the trading name
+            </h2>
+          </legend>
+          <span id="about-hint" class="govuk-hint">
+            Use this section to give a brief overview of the organisation. Include any information you feel may be useful to enforcing authorities.
+          </span>
+          <input class="govuk-input govuk-input--width-20" id="trading-name" name="trading-name" type="text">
+          <p><a href="#another" class="flow-link">Add another</a></p>
+        </fieldset>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

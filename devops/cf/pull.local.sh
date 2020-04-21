@@ -141,7 +141,10 @@ rm -fr ./beis-primary-authority-register-prototype
 REPO="https://github.com/UKGovernmentBEIS/beis-primary-authority-register-prototype.git"
 git ls-remote --tags $REPO | grep -E "refs/(heads|tags)/${VERSION}$"
 
+
 if [[ $? -eq 0 ]]; then
+    printf "Retrieving tag '$VERSION'...\n"
+
     git clone $REPO --branch $VERSION --depth 1 --single-branch
 
     cd ./beis-primary-authority-register-prototype && npm install

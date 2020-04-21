@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">New partnership application</span>
+        Information about the new partnership
+      </h1>
+
+      <form action="/partnerships/apply/name" method="post" class="form">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Provide information about the partnership
+            </h2>
+          </legend>
+          <span id="about-hint" class="govuk-hint">
+            Use this section to give a brief overview of the partnership. Include any information you feel may be useful to enforcing authorities.
+          </span>
+          <textarea class="govuk-textarea" id="edit-about" name="about" rows="5" aria-describedby="about-hint"></textarea>
+        </fieldset>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

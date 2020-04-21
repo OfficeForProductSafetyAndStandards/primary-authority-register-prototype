@@ -1,0 +1,135 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">New partnership application</span>
+        Is this an incorporated organisation?
+      </h1>
+
+      <form action="/partnerships/apply/registered-process" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <!-- Registered organisation -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registered-organisation" name="registered-organisation" type="radio" value="yes" data-aria-controls="conditional-registered-organisation">
+                <label class="govuk-label govuk-radios__label" for="registered-organisation">
+                  Yes
+                </label>
+                <span id="sequenced-partnership-hint" class="govuk-hint govuk-radios__hint">
+                  This organisation is registered with companies house
+                </span>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-registered-organisation">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h3 class="govuk-fieldset__heading">
+                        Choose the primary registered organisation
+                      </h3>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="registered-organisation--123456" name="registered-organisation-number" type="radio" value="123456">
+                        <label class="govuk-label govuk-radios__label" for="registered-organisation--123456">
+                          Test Organisation (123456)
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="registered-organisation--987654" name="registered-organisation-number" type="radio" value="987654">
+                        <label class="govuk-label govuk-radios__label" for="registered-organisation--987654">
+                          Tester Organisation (987654)
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="registered-organisation--3759383" name="registered-organisation-number" type="radio" value="3759383">
+                        <label class="govuk-label govuk-radios__label" for="registered-organisation--3759383">
+                          Bestest Organisation (3759383)
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+              <!-- Unregistered organisation -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="partnership-regulatory-functions-bespoke" name="registered-organisation" type="radio" value="no" data-aria-controls="conditional-unregistered-organisation">
+                <label class="govuk-label govuk-radios__label" for="partnership-regulatory-functions-bespoke">
+                  No
+                </label>
+                <span id="bespoke-partnership-hint" class="govuk-hint govuk-radios__hint">
+                  This is an un-registered organisation such as a sole trader
+                </span>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-unregistered-organisation">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h3 class="govuk-fieldset__heading">
+                        What type of organisation is this?
+                      </h3>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="unregistered-organisation--partnership" name="unregistered-organisation-type" type="radio" value="partnership">
+                        <label class="govuk-label govuk-radios__label" for="unregistered-organisation--partnership">
+                          <div><p>Partnership</p></div>
+                          <div><p class="govuk-hint">A partnership is a contractual arrangement between two or more people that is set up with a view to profit and to share the profits amongst the partners. </p></div>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="unregistered-organisation--sole-trader" name="unregistered-organisation-type" type="radio" value="sole-trader">
+                        <label class="govuk-label govuk-radios__label" for="unregistered-organisation--sole-trader">
+                          <div><p>Sole Trader</p></div>
+                          <div><p class="govuk-hint">A sole trader is an individual who is registered with HMRC for tax purposes.</p></div>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="unregistered-organisation--charity" name="organisation-type" type="radio" value="charity">
+                        <label class="govuk-label govuk-radios__label" for="unregistered-organisation--charity">
+                          <div><p>Charity</p></div>
+                          <div><p class="govuk-hint">An unincorporated charity, which could be aa trust or other social enterprise.</p></div>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="unregistered-organisation--association" name="organisation-type" type="radio" value="unincorporated-association">
+                        <label class="govuk-label govuk-radios__label" for="unregistered-organisation--association">
+                          <div><p>Unincorporated association</p></div>
+                          <div><p class="govuk-hint">A simple way for a group of volunteers to run an organisation for a common purpose.</p></div>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="unregistered-organisation--other" name="organisation-type" type="radio" value="other">
+                        <label class="govuk-label govuk-radios__label" for="unregistered-organisation--other">
+                          <div><p>Other</p></div>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

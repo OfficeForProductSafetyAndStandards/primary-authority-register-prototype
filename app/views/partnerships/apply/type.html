@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">New partnership application</span>
+        What kind of partnership are you applying for?
+      </h1>
+
+      <form action="/partnerships/apply/declaration" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Choose a type of partnership
+              </h2>
+              <span class="govuk-hint">For more information visit the <a href="https://www.gov.uk/guidance/local-regulation-primary-authority#what-are-the-two-types-of-partnership" target="_blank">Primary Authority Guidance</a></span>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-application-type-direct" name="par_data_organisation_id" type="radio" value="direct">
+                <label class="govuk-label govuk-radios__label" for="edit-application-type-direct">
+                  <div><p>Direct</p></div>
+                  <div><p class="govuk-hint">For a partnership with a single business.</p></div>
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-application-type-coordinated" name="par_data_organisation_id" type="radio" value="coordinated">
+                <label class="govuk-label govuk-radios__label" for="edit-application-type-coordinated">
+                  <div><p>Co-ordinated</p></div>
+                  <div><p class="govuk-hint">For a partnership with a trade association or other organisation to provide advice to a group of businesses.</p></div>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
