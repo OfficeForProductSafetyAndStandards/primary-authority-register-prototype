@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  About Primary Authority
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Primary Authority partnership information</span>
+      Reorder partnership contacts
+    </h1>
+
+    <form action="/partnerships/manage" method="post" class="form">
+      <div class="govuk-grid-row govuk-form-group">
+        <div class="govuk-grid-column-three-quarters">
+          <p><strong>Mrs Jane Smith</strong> (primary contact)
+          <br>jane.smith@example.com</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p><a href="#">move up</a>
+            <br><a href="#">move down</a></p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row govuk-form-group">
+        <div class="govuk-grid-column-three-quarters">
+          <p>Mr James McKeith
+          <br>james.mckeith@example.com</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p><a href="#">move up</a>
+            <br><a href="#">move down</a></p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row govuk-form-group">
+        <div class="govuk-grid-column-three-quarters">
+          <p>Mrs Sally Williams
+          <br>sally.williams@example.com</p>
+        </div>
+        <div class="govuk-grid-column-one-quarter">
+          <p><a href="#">move up</a>
+            <br><a href="#">move down</a></p>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <p><a class="govuk-link" href="/partnerships/manage">Cancel</a></p>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
