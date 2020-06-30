@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+About Primary Authority
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      People
+    </h1>
+
+    <div class="">
+      <p>__filter form__</p>
+      <br><br><br>
+    </div>
+
+    <div class="govuk-!-padding-bottom-5">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">People that you can manage</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th id="view-last-name-table-column" scope="col" class="govuk-table__header">Name</th>
+            <th id="view-par-person-email-table-column" scope="col" class="govuk-table__header">E-mail</th>
+            <th id="view-access-table-column" scope="col" class="govuk-table__header">Last access</th>
+            <th id="view-par-flow-link-table-column" scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="list-item-person">
+            <td headers="view-last-name-table-column" class="govuk-table__cell">Sue Williams</td>
+            <td headers="view-par-person-email-table-column" class="govuk-table__cell">sue@example.com</td>
+            <td headers="view-access-table-column" class="govuk-table__cell">3 May 2019</td>
+            <td headers="view-par-flow-link-table-column" class="govuk-table__cell">
+              <a href="/people/manage" aria-label="Manage 1245689 1245689 lllll">Manage contact</a><br>
+              <a href="#" aria-label="Remove 1245689 1245689 from the authority XXXXX">Remove from authority</a><br>
+              <a href="#" aria-label="Remove 1245689 1245689 from the organisation XXXXX">Remove from organisation</a>
+            </td>
+          </tr>
+          <tr class="list-item-person">
+            <td headers="view-last-name-table-column" class="govuk-table__cell">David Jones</td>
+            <td headers="view-par-person-email-table-column" class="govuk-table__cell">david@example.com</td>
+            <td headers="view-access-table-column" class="govuk-table__cell">15 March 2020</td>
+            <td headers="view-par-flow-link-table-column" class="govuk-table__cell">
+              <a href="/people/manage" aria-label="Manage 1245689 1245689 lllll">Manage contact</a><br>
+              <a href="#" aria-label="Remove 1245689 1245689 from the organisation XXXXX">Remove from organisation</a>
+            </td>
+          </tr>
+          <tr class="list-item-person">
+            <td headers="view-last-name-table-column" class="govuk-table__cell">Susan Williams</td>
+            <td headers="view-par-person-email-table-column" class="govuk-table__cell">susan@example.com</td>
+            <td headers="view-access-table-column" class="govuk-table__cell"></td>
+            <td headers="view-par-flow-link-table-column" class="govuk-table__cell">
+              <a href="/people/manage" aria-label="Manage 1245689 1245689 lllll">Manage contact</a><br>
+            </td>
+          </tr>
+          <tr class="list-item-person">
+            <td headers="view-last-name-table-column" class="govuk-table__cell">James De'ath</td>
+            <td headers="view-par-person-email-table-column" class="govuk-table__cell">james@example.com</td>
+            <td headers="view-access-table-column" class="govuk-table__cell"></td>
+            <td headers="view-par-flow-link-table-column" class="govuk-table__cell">
+              <a href="/people/manage" aria-label="Manage 1245689 1245689 lllll">Manage contact</a><br>
+              <a href="#" aria-label="Remove 1245689 1245689 from the organisation XXXXX">Remove from authority</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
