@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Create a new Person</span>
+        Are you looking for one of these people?
+      </h1>
+
+      <form action="/people/add/existing-process" method="post" class="form">
+        <div class="help">
+          <p>There is already a person with that e-mail address. Please update any existing people or add an additional contact record for this person.</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Choose an existing person to update
+              </h2>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-par-data-person-id-1" name="par_data_person_id" type="radio" value="1">
+                <label class="govuk-label govuk-radios__label" for="edit-par-data-person-id-1">
+                  <div class="organisation-name">Mr Test Person</div>
+                  <div>07742 119 046</div>
+                  <div><p>test-person@example.com</p></div>
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-par-data-person-id-2" name="par_data_person_id" type="radio" value="1">
+                <label class="govuk-label govuk-radios__label" for="edit-par-data-person-id-1">
+                  <div class="organisation-name">Dr Test Person</div>
+                  <div>01890 675 483</div>
+                  <div><p>test-person@example.com</p></div>
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="edit-par-data-person-id-new" name="par_data_person_id" type="radio" value="new">
+                <label class="govuk-label govuk-radios__label" for="edit-par-data-person-id-new">
+                  No, I'd like to create a new contact record
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/people">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

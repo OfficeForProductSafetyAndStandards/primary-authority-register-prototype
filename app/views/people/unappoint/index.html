@@ -2,76 +2,58 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  The Primary Authority Register Prototype
+The Primary Authority Register Prototype
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
-        Unappoint person
-      </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Choose a person to unappoint
+    </h1>
 
-      <form action="/people/unappoint/select-people" method="post" class="form">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint-auth">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">
-                Which of these authorities would you like to remove this person from?
-              </h3>
-            </legend>
-            <span id="waste-hint-auth" class="govuk-hint">
-      Select all that apply.
-    </span>
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Hertfordshire County Council
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                  Surrey County Council
-                </label>
-              </div>
+    <form action="/people/unappoint/institutions" method="post" class="form">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint-auth">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h3 class="govuk-fieldset__heading">
+              Which of these people would you like to un-appoint?
+            </h3>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="person-1" name="person" type="radio" checked value="1">
+              <label class="govuk-label govuk-radios__label" for="person-1">
+                <p>Mrs Sue Williams<br>sue@example.com<br>0110 234 765</p>
+              </label>
             </div>
-          </fieldset>
-        </div>
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint-org">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h3 class="govuk-fieldset__heading">
-                Which of these organisations would you like to remove this person from?
-              </h3>
-            </legend>
-            <span id="waste-hint-org" class="govuk-hint">
-      Select all that apply.
-    </span>
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="waste">
-                  Surrey Care Services
-                </label>
-              </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="person-2" name="person" type="radio" value="2">
+              <label class="govuk-label govuk-radios__label" for="person-2">
+                <p>Ms Sue Williams<br>sue@example.com<br>0110 777 333</p>
+              </label>
             </div>
-          </fieldset>
-        </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="person-3" name="person" type="radio" value="3">
+              <label class="govuk-label govuk-radios__label" for="person-3">
+                <p>Dr Sue Williams<br>sue@example.com<br>0110 234 999</p>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <div class="govuk-form-group">
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <p><a class="govuk-link" href="/">Cancel</a></p>
-        </div>
+      <div class="govuk-form-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <p><a class="govuk-link" href="/people/manage">Cancel</a></p>
+      </div>
 
-      </form>
+    </form>
 
-    </div>
+  </div>
 </div>
 
 {% endblock %}

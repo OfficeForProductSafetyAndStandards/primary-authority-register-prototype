@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Create a new Person</span>
+        Enter the e-mail address
+      </h1>
+
+      <form action="/people/add/institutions" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Enter the title (optional)
+              </h2>
+            </legend>
+            <span id="title-hint" class="govuk-hint">For example, Ms Mr Mrs Dr </span>
+            <input class="govuk-input govuk-input--width-20" id="title" name="title" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Enter the first name
+              </h2>
+            </legend>
+            <input class="govuk-input govuk-input--width-20" id="first-name" name="first-name" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Enter the last name
+              </h2>
+            </legend>
+            <input class="govuk-input govuk-input--width-20" id="last-name" name="last-name" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Enter the work phone number
+              </h2>
+            </legend>
+            <input class="govuk-input govuk-input--width-20" id="work-phone" name="work-phone" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h2 class="govuk-fieldset__heading">
+                Enter the mobile phone number
+              </h2>
+            </legend>
+            <input class="govuk-input govuk-input--width-20" id="mobile-phone" name="mobile-phone" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/people">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

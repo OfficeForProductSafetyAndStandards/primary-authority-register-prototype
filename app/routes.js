@@ -45,4 +45,26 @@ router.post('/partnerships/complete/additional-legal-entities-process', function
     }
 })
 
+// Process additional legal entities.
+router.post('/people/add/existing-process', function (req, res) {
+    let answer = req.session.data['par_data_person_id']
+
+    if (answer === 'new') {
+        res.redirect('/people/add/contact-details')
+    } else {
+        res.redirect('/people/manage/update')
+    }
+})
+
+// Process additional legal entities.
+router.post('/people/add/account-process', function (req, res) {
+    let answer = req.session.data['user-account']
+
+    if (answer === 'yes') {
+        res.redirect('/people/add/invite')
+    } else {
+        res.redirect('/people/add/review')
+    }
+})
+
 module.exports = router

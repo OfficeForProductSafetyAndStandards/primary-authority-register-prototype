@@ -1,0 +1,120 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Create a new Person</span>
+        Would you like to create a user account?
+      </h1>
+
+      <form action="/people/add/account-process" method="post" class="form">
+        <div class="help">
+          <p>A user account will let this person sign into the Primary Authority Register.</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                Create a user account?
+              </h3>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="user-account-no" name="user-account" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="user-account-no">No</label>
+              </div>
+              <!-- Bespoke partnerships (more than one partnership) -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="user-account-yes" name="user-account" type="radio" value="yes" data-aria-controls="conditional-user-account-yes">
+                <label class="govuk-label govuk-radios__label" for="user-account-yes">Yes</label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-user-account-yes">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h3 class="govuk-fieldset__heading">
+                        What role does this person need within the authority?
+                      </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="authority-role--enforcement-officer" name="authority-role" type="radio" value="enforcement_officer">
+                        <label class="govuk-label govuk-radios__label" for="authority-role--enforcement-officer">
+                          Enforcement Officer <sup>1</sup>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="authority-role--authority-member" name="authority-role" type="radio" checked value="authority_member">
+                        <label class="govuk-label govuk-radios__label" for="authority-role--authority-member">
+                          Authority Member <sup>1</sup>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="authority-role--authority-manager" name="authority-role" type="radio" value="authority_manager">
+                        <label class="govuk-label govuk-radios__label" for="authority-role--authority-manager">
+                          Authority Manager <sup>1</sup>
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                      <h3 class="govuk-fieldset__heading">
+                        Would you like this person to have any additional roles?
+                      </h3>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="role--helpdesk" name="role" type="radio" value="helpdesk">
+                        <label class="govuk-label govuk-radios__label" for="role--helpdesk">
+                          Helpdesk User <sup>2</sup>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="role--osu" name="role" type="radio" value="osu">
+                        <label class="govuk-label govuk-radios__label" for="role--osu">
+                          OSU Officer <sup>2</sup>
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="role--none" name="role" checked type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="role--osu">
+                          No, I don't want this person to have any additional roles
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/people">Cancel</a></p>
+        </div>
+
+        <div class="govuk-form-group">
+          <p><sup>1</sup> Can only be choosen if the person was added to an authority.</p>
+          <p><sup>2</sup> Can only be added by a helpdesk user.</p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Create a new Person</span>
+        Check contact details
+      </h1>
+
+      <form action="/people" method="post" class="form">
+        <div class="govuk-form-group">
+          <div>
+            <h2 class="govuk-heading-m">Dr Test Person</h2>
+          </div>
+          <div class="contact-details">
+            <p>01900 442 844
+              <br>07742 119 046
+              <br>test-person@example.com
+            </p>
+            <p><a href="#contact-details" class="flow-link">Change the contact details</a></p>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <div>
+            <h3 class="govuk-heading-s">Dr Test Person will be added to the following authorities</h3>
+          </div>
+          <ul class="govuk-list govuk-list--bullet authority-list">
+            <li>
+              <p>South Borough Council</p>
+            </li>
+            <li>
+              <p>Inner City Council</p>
+            </li>
+          </ul>
+          <p><a href="#roles" class="flow-link">Change the authorities</a></p>
+        </div>
+
+        <div class="govuk-form-group">
+          <div>
+            <h3 class="govuk-heading-s">Dr Test Person will be added to the following organisations</h3>
+          </div>
+          <ul class="govuk-list govuk-list--bullet organisation-list">
+            <li>
+              <p>City Cafe</p>
+            </li>
+            <li>
+              <p>Food Delivery Service</p>
+            </li>
+          </ul>
+          <p><a href="#roles" class="flow-link">Change the organisations</a></p>
+        </div>
+
+        <div class="help">
+          <div>
+            <h3 class="govuk-heading-s">Dr Test Person will be invited to create an account with the following roles</h3>
+          </div>
+          <div class="roles">
+            <ul class="govuk-list govuk-list--bullet role-list">
+              <li>
+                <p>Organisation Member</p>
+              </li>
+              <li>
+                <p>Authority Manager</p>
+              </li>
+            </ul>
+          </div>
+          <p><a href="#roles" class="flow-link">Change their roles</a></p>
+        </div>
+
+        <div class="help">
+          <br>
+          <br>
+          <p>You are about to add a new person, please confirm the details are correct.</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Save
+          </button>
+          <p><a class="govuk-link" href="/people">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

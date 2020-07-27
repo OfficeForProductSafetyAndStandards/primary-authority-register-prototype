@@ -1,0 +1,85 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Create a new Person</span>
+        Invite the person to create an account
+      </h1>
+
+      <form action="/people/add/review" method="post" class="form">
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            Sender's email address
+          </h2>
+          <p>sender@example.com</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            Recipient's email address
+          </h2>
+          <p>recipient@example.com</p>
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            Enter your message
+          </h2>
+          <p>
+            <span id="message-hint" class="govuk-hint">This invitation will be sent to <i>recipient@example.com</i> with a link to register an account. You can amend the message if you wish but please <strong>do not change or delete the acceptance link</strong>.
+            </span>
+          </p>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
+                Message subject
+              </h3>
+            </legend>
+            <input class="govuk-input govuk-input--width-20" id="title" value='Invitation to join the Primary Authority Register' name="title" type="text">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h3 class="govuk-fieldset__heading">
+                Message
+              </h3>
+            </legend>
+            <textarea class="govuk-textarea" id="edit-about" name="about" rows="18" cols="60" aria-describedby="about-hint">
+Dear recipient,
+
+You are being invited to join the Primary Authority Register. Please create your account so that you can manage your partnerships. To do this, please follow this link:
+
+[invite:invite-accept-link]
+
+Thanks for your help.
+BEIS RD Department
+            </textarea>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/people">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
