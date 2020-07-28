@@ -101,22 +101,97 @@
       </p>
     </div>
 
-    <div class="govuk-!-padding-bottom-5">
-      <h3 class="govuk-heading-m">
+    <div class="govuk-grid-row govuk-!-padding-bottom-5 govuk-tabs" data-module="govuk-tabs">
+      <h3 class="govuk-tabs__title">
         Number of members
       </h3>
-      <p>
-        There are <strong>100</strong> members covered by this partnership.
-      </p>
-      <p>
-        Please request a list of members from the coordinator, they will be able to provide a list on request.
-      </p>
-      <p>
-        <a href="/partnerships/manage/members/number">update the number of members</a>
-      </p>
-      <p>
-        <a href="#upload-list">upload member list (csv)</a>
-      </p>
+
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab" href="#members-none">
+            No member list
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#members-display-inline">
+            Inline list
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#members-display-list">
+            Separate list
+          </a>
+        </li>
+      </ul>
+
+      <section class="govuk-tabs__panel" id="members-none">
+        <h3 class="govuk-heading-m">
+          Number of members
+        </h3>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p>
+              There are <strong>100</strong> members covered by this partnership.
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>
+              <a href="/partnerships/manage/members/update">update member list</a>
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Please request a list of members from the coordinator, they will be able to provide a list on request.
+        </p>
+      </section>
+
+      <section class="govuk-tabs__panel" id="members-display-list">
+        <h3 class="govuk-heading-m">
+          Number of members
+        </h3>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p>
+              There are <strong>100</strong> active members covered by this partnership.
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>
+              <a href="/partnerships/manage/members/update">update member list</a>
+            </p>
+          </div>
+        </div>
+        <p>
+          <a href="#member-list">show members list</a>
+        </p>
+      </section>
+
+      <section class="govuk-tabs__panel" id="members-display-inline">
+        <h3 class="govuk-heading-m">
+          Number of members
+        </h3>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p>
+              There are <strong>100</strong> active members covered by this partnership.
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <p>
+              <a href="/partnerships/manage/members/update">update member list</a>
+            </p>
+          </div>
+        </div>
+        <ul class="govuk-list">
+          <li><p>Sesame St Cafe</p></li>
+          <li><p>Sesame Street Cafe</p></li>
+          <li><p>Sesame Street Deli</p></li>
+          <li><p>Sesame Street Pop-up Cafe</p></li>
+          <li><p>Sesame Street Restaurant</p></li>
+        </ul>
+        <p>__need to work out pagination, it isn't included in GOVUK Frontend__</p>
+      </section>
     </div>
 
     <div class="govuk-!-padding-bottom-5">
