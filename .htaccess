@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Access to the prototype site is required"
+AuthUserFile .htpasswd
+Require valid-user

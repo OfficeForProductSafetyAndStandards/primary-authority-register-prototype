@@ -1,0 +1,762 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+About Primary Authority
+{% endblock %}
+
+{% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      Advanced Search
+    </h1>
+
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#partnerships">
+            Partnerships
+          </a>
+        </li>
+<!--        <li class="govuk-tabs__list-item">-->
+<!--          <a class="govuk-tabs__tab" href="#authorities">-->
+<!--            Authorities-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="govuk-tabs__list-item">-->
+<!--          <a class="govuk-tabs__tab" href="#organisations">-->
+<!--            Organisations-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="govuk-tabs__list-item">-->
+<!--          <a class="govuk-tabs__tab" href="#enforcements">-->
+<!--            Enforcements-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="govuk-tabs__list-item">-->
+<!--          <a class="govuk-tabs__tab" href="#advice">-->
+<!--            Advice-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="govuk-tabs__list-item">-->
+<!--          <a class="govuk-tabs__tab" href="#inspection_plans">-->
+<!--            Inspection Plans-->
+<!--          </a>-->
+<!--        </li>-->
+      </ul>
+
+      <div class="govuk-tabs__panel" id="partnerships">
+        <h2 class="govuk-heading-l">Partnerships</h2>
+
+        <div class="filters">
+          <div class="govuk-grid-row">
+            <!-- Organisation & Authority names -->
+            <div class="govuk-grid-column-one-half">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="organisation_name">Organisation</label>
+                <input class="govuk-input" id="organisation_name" name="organisation_name" type="text">
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-half">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="authority_name">Authority</label>
+                <input class="govuk-input" id="authority_name" name="authority_name" type="text">
+              </div>
+            </div>
+
+            <!-- Search terms -->
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="keywords-hint">
+                  <label class="govuk-label" for="search_keywords">Keywords</label>
+                  <div id="fields-hint" class="govuk-hint">
+                    The terms to search for, <a href="#">advanced query arguments</a> can be used.
+                  </div>
+                  <input class="govuk-input" id="search_keywords" name="keywords" type="text">
+<!--                  <details class="govuk-details" data-module="govuk-details">-->
+<!--                    <summary class="govuk-details__summary">-->
+<!--                    <span class="govuk-details__summary-text">-->
+<!--                      Advanced search options-->
+<!--                    </span>-->
+<!--                    </summary>-->
+<!--                    <div class="govuk-details__text">-->
+<!--                      <ul class="govuk-list">-->
+<!--                        <li><code>+</code> 	Acts as the and operator.</li>-->
+<!--                        <li>| 	Acts as the or operator.</li>-->
+<!--                        <li>* 	Acts as a wildcard.</li>-->
+<!--                        <li>"" 	Wraps several terms into a phrase.</li>-->
+<!--                        <li>() 	Wraps a clause for precedence.</li>-->
+<!--                        <li>~n 	When used after a term (e.g. wnid~3), sets fuzziness. When used after a phrase, sets how much words can be misordered.</li>-->
+<!--                        <li>- 	Negates the term.</li>-->
+<!--                      </ul>-->
+<!--                    </div>-->
+<!--                  </details>-->
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="fields-hint">
+                  <label class="govuk-label" for="search_fields">Search fields</label>
+                  <div id="fields-hint" class="govuk-hint">
+                    Choose which fields to search by
+                  </div>
+                  <select class="govuk-select govuk-!-width-full" id="search_fields" name="sort">
+                    <option value="all" selected>All</option>
+                    <option value="name">Name</option>
+                    <option value="authority">Authority Name</option>
+                    <option value="organisation">Organisation Name</option>
+                    <option value="legal_entity">Legal Entity</option>
+                    <option value="trading_name">Trading Name</option>
+                    <option value="trading_name">Advice title</option>
+                    <option value="trading_name">Inspection Plan title</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+
+            <!-- Filters-->
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_type">Partnership Type</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_type" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="direct">Direct</option>
+                  <option value="coordinated">Coordinated</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_status">Partnership Status</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_status" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="direct">Awaiting Review</option>
+                  <option value="confirmed_authority">Confirmed by the authority</option>
+                  <option value="confirmed_organisation">Confirmed by the organisation</option>
+                  <option value="active">Active</option>
+                  <option value="Revoked">Revoked</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_regulatory_function">Regulatory Function</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_regulatory_function" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="environmental_health">Environmental Health</option>
+                  <option value="trading_standards">Trading Standards</option>
+                  <option value="fire_safety">Fire Safety</option>
+                  <option value="licensing">Licensing</option>
+                  <option value="petrol_storage_certification">Petrol Storage Certification</option>
+                  <option value="explosives_licensing">Explosives Licensing</option>
+                  <option value="health_safety">Health & Safety</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Field Requirements -->
+<!--            <div class="govuk-grid-column-full">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">-->
+<!--                      <legend class="govuk-fieldset__legend">-->
+
+<!--                      </legend>-->
+<!--                      <div id="waste-hint" class="govuk-hint">-->
+<!--                        Filter by partnerships that have:-->
+<!--                      </div>-->
+<!--                      <div class="govuk-checkboxes govuk-checkboxes&#45;&#45;small" data-module="govuk-checkboxes">-->
+<!--                        <div class="govuk-checkboxes__item">-->
+<!--                          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">-->
+<!--                          <label class="govuk-label govuk-checkboxes__label" for="waste">-->
+<!--                            Active advice document(s) attached-->
+<!--                          </label>-->
+<!--                        </div>-->
+<!--                        <div class="govuk-checkboxes__item">-->
+<!--                          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">-->
+<!--                          <label class="govuk-label govuk-checkboxes__label" for="waste-2">-->
+<!--                            An active inspection plan attached-->
+<!--                          </label>-->
+<!--                        </div>-->
+<!--                        <div class="govuk-checkboxes__item">-->
+<!--                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">-->
+<!--                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">-->
+<!--                            A member list uploaded-->
+<!--                          </label>-->
+<!--                        </div>-->
+<!--                        <div class="govuk-checkboxes__item">-->
+<!--                          <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">-->
+<!--                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">-->
+<!--                            An enforcement notice raised against it-->
+<!--                          </label>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                </fieldset>-->
+<!--              </div>-->
+<!--            </div>-->
+
+            <!-- Referenced fields -->
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_advice_type">Advice Type</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_advice_type" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="business_advice">Primary Authority advice for the organisation</option>
+                  <option value="authority_advice">Primary Authority advice to Local Authorities</option>
+                  <option value="background_information">Background information</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_advice_status">Advice Status</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_advice_status" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="active">Active</option>
+                  <option value="archived">Archived</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_inspection_plan_status">Inspection Plan Status</label>
+                <select class="govuk-select govuk-!-width-full" id="filter_inspection_plan_status" name="sort">
+                  <option value="all" selected>All</option>
+                  <option value="active">Active</option>
+                  <option value="revoked">Revoked</option>
+                </select>
+              </div>
+            </div>
+
+
+            <!-- Search terms -->
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="keywords-hint">
+                  <label class="govuk-label" for="search_keywords">Number of Members</label>
+                  <input class="govuk-input" id="member_number" name="member_number" type="text">
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="fields-hint">
+                  <label class="govuk-label" for="search_fields">Member list type</label>
+                  <select class="govuk-select govuk-!-width-full" id="member_list_type" name="sort">
+                    <option value="all" selected>All</option>
+                    <option value="internal">Internal list on the register</option>
+                    <option value="external">External list available by link</option>
+                    <option value="request">External list available on request</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+
+            <!-- Date Range -->
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="filter_date_property">Date</label>
+                <div id="subject-hint" class="govuk-hint">
+                  Choose the property for the range
+                </div>
+                <select class="govuk-select govuk-!-width-full" id="filter_date_property" name="sort">
+                  <option value="partnership_created" selected>Partnership Created</option>
+                  <option value="partnership_approved">Partnership Approved</option>
+                  <option value="partnership_revoked">Partnership Revoked</option>
+                  <option value="advice_created">Advice Created</option>
+                  <option value="advice_archived">Advice Archived</option>
+                  <option value="inspection_plan_created">Inspection Plan Created</option>
+                  <option value="inspection_plan_archived">Inspection Plan Revoked / Expired</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="start_date_hint">
+                  <legend class="govuk-fieldset__legend">
+                    Start Date
+                  </legend>
+                  <div class="govuk-date-input" id="filter_start_date">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter_start_date_day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter_start_date_day" name="start_date_day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter_start_date_month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter_start_date_month" name="start_date_month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="start_date_year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start_date_year" name="start_date_year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="end_date_hint">
+                  <legend class="govuk-fieldset__legend">
+                    End Date
+                  </legend>
+                  <div class="govuk-date-input" id="filter_end_date">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter_end_date_day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter_end_date_day" name="end_date_day" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="filter_end_date_month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="filter_end_date_month" name="end_date_month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="end_date_year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end_date_year" name="end_date_year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Search
+            </button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Save this search
+            </button>
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Export
+            </button>
+          </div>
+        </div>
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th id="view-partnership-name-table-column" scope="col" class="govuk-table__header">Partnership name</th>
+              <th id="view-partnership-type-table-column" scope="col" class="govuk-table__header">Type</th>
+              <th id="view-partnership-regulatory-functions-table-column" scope="col" class="govuk-table__header">Regulatory Functions</th>
+              <th id="view-partnership-status-table-column" scope="col" class="govuk-table__header">Status</th>
+              <th id="view-partnership-status-change-table-column" scope="col" class="govuk-table__header">Last Status Change</th>
+              <th id="view-partnership-members-table-column" scope="col" class="govuk-table__header">Members</th>
+              <th id="view-partnership-legal-entities-table-column" scope="col" class="govuk-table__header">Legal Entities</th>
+              <th id="view-partnership-trading-name-table-column" scope="col" class="govuk-table__header">Trading Names</th>
+              <th id="view-partnership-advice-table-column" scope="col" class="govuk-table__header">Advice</th>
+              <th id="view-partnership-inspection-plan-table-column" scope="col" class="govuk-table__header">Inspection Plans</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="list-item-partnership">
+              <td headers="view-partnership-name-table-column" class="govuk-table__cell"><a href="#partnerships">Partnership between Corporation Ltd and Westminster Local Authority</a></td>
+              <td headers="view-partnership-type-table-column" class="govuk-table__cell">Direct</td>
+              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell">Food Safety</td>
+              <td headers="view-partnership-status-table-column" class="govuk-table__cell">Active</td>
+              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell">9th July 2022</td>
+              <td headers="view-partnership-members-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell">Corporation Ltd, Big Corporation Ltd</td>
+              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell">Corporation, Big Corporation</td>
+              <td headers="view-partnership-advice-table-column" class="govuk-table__cell">Regulatory legislation, Guidance on food safety, Reporting guidelines to business</td>
+              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell">Inspection plan for food safety</td>
+            </tr>
+            <tr class="list-item-partnership">
+              <td headers="view-partnership-name-table-column" class="govuk-table__cell"><a href="#partnerships">Partnership between Corporation Ltd and Westminster Local Authority</a></td>
+              <td headers="view-partnership-type-table-column" class="govuk-table__cell">Direct</td>
+              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell">Fire Safety, Petrol Storage Certification</td>
+              <td headers="view-partnership-status-table-column" class="govuk-table__cell">Active</td>
+              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell">16th April 2020</td>
+              <td headers="view-partnership-members-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell">Corporation Ltd (0123456789)</td>
+              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell">Corporation</td>
+              <td headers="view-partnership-advice-table-column" class="govuk-table__cell">Guidance on food safety, Reporting guidelines to business</td>
+              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell">Inspection plan for food safety</td>
+            </tr>
+            <tr class="list-item-partnership">
+              <td headers="view-partnership-name-table-column" class="govuk-table__cell"><a href="#partnerships">Partnership between Jones and Westminster Local Authority</a></td>
+              <td headers="view-partnership-type-table-column" class="govuk-table__cell">Direct</td>
+              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell">Licensing</td>
+              <td headers="view-partnership-status-table-column" class="govuk-table__cell">Active</td>
+              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell">1th January 2018</td>
+              <td headers="view-partnership-members-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell">Jones Ltd (121234341234)</td>
+              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell">Jones, Jones Co.</td>
+              <td headers="view-partnership-advice-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell">n/a</td>
+            </tr>
+            <tr class="list-item-partnership">
+              <td headers="view-partnership-name-table-column" class="govuk-table__cell"><a href="#partnerships">Partnership between Trading Partnership and Westminster Local Authority</a></td>
+              <td headers="view-partnership-type-table-column" class="govuk-table__cell">Coordinated</td>
+              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell">Environmental Health, Licensing</td>
+              <td headers="view-partnership-status-table-column" class="govuk-table__cell">Active</td>
+              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell">12th April 2021</td>
+              <td headers="view-partnership-members-table-column" class="govuk-table__cell">Dave, Jill, Bob, Laura</td>
+              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell">Trading Partnership Ltd</td>
+              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell">The Independent Trading Partnerships</td>
+              <td headers="view-partnership-advice-table-column" class="govuk-table__cell">Guidance on food safety, Reporting guidelines to business</td>
+              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell">Inspection plan for food safety</td>
+            </tr>
+            <tr class="list-item-partnership">
+              <td headers="view-partnership-name-table-column" class="govuk-table__cell"><a href="#partnerships"><a href="#partnerships">Partnership between Corporation Ltd and Westminster Local Authority</a></td>
+              <td headers="view-partnership-type-table-column" class="govuk-table__cell">Direct</td>
+              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell">Licensing</td>
+              <td headers="view-partnership-status-table-column" class="govuk-table__cell">Active</td>
+              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell">9th July 2022</td>
+              <td headers="view-partnership-members-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell">Corporation Ltd</td>
+              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell">Corporation</td>
+              <td headers="view-partnership-advice-table-column" class="govuk-table__cell">n/a</td>
+              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell">n/a</td>
+            </tr>
+            <br><br>
+<!--            <tr class="list-item-partnership">-->
+<!--              <td headers="view-partnership-name-table-column" class="govuk-table__cell govuk-!-font-weight-bold">Totals</td>-->
+<!--              <td headers="view-partnership-type-table-column" class="govuk-table__cell govuk-!-font-weight-bold"></td>-->
+<!--              <td headers="view-partnership-regulatory-functions-table-column" class="govuk-table__cell govuk-!-font-weight-bold">7</td>-->
+<!--              <td headers="view-partnership-status-table-column" class="govuk-table__cell govuk-!-font-weight-bold"></td>-->
+<!--              <td headers="view-partnership-status-change-table-column" class="govuk-table__cell govuk-!-font-weight-bold"></td>-->
+<!--              <td headers="view-partnership-members-table-column" class="govuk-table__cell govuk-!-font-weight-bold">4</td>-->
+<!--              <td headers="view-partnership-legal-entities-table-column" class="govuk-table__cell govuk-!-font-weight-bold">6</td>-->
+<!--              <td headers="view-partnership-trading-name-table-column" class="govuk-table__cell govuk-!-font-weight-bold">7</td>-->
+<!--              <td headers="view-partnership-advice-table-column" class="govuk-table__cell govuk-!-font-weight-bold">2</td>-->
+<!--              <td headers="view-partnership-inspection-plan-table-column" class="govuk-table__cell govuk-!-font-weight-bold">1</td>-->
+<!--            </tr>-->
+          </tbody>
+        </table>
+
+        <div>
+          <p>Showing 1-10 of 2601 results</p>
+        </div>
+
+        <nav class="govuk-pagination" role="navigation" aria-label="results">
+          <div class="govuk-pagination__prev">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+              </svg>
+              <span class="govuk-pagination__link-title">Previous</span></a>
+          </div>
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg></a>
+          </div>
+        </nav>
+      </div>
+
+<!--      <div class="govuk-tabs__panel" id="authorities">-->
+<!--        <h2 class="govuk-heading-l">Authorities</h2>-->
+
+<!--        <div class="filters">-->
+<!--          <div class="govuk-grid-row">-->
+<!--            &lt;!&ndash; Search terms &ndash;&gt;-->
+<!--            <div class="govuk-grid-column-one-half">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <label class="govuk-label" for="search_keywords">Authority name</label>-->
+<!--                <input class="govuk-input" id="search_keywords" name="keywords" type="text">-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Organisation names &ndash;&gt;-->
+<!--            <div class="govuk-grid-column-one-half">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <label class="govuk-label" for="organisation_name">Has a partnership with</label>-->
+<!--                <input class="govuk-input" id="authority_name" name="organisation_name" type="text">-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            &lt;!&ndash; Regulatory Functions filter &ndash;&gt;-->
+<!--            <div class="govuk-grid-column-one-third">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <label class="govuk-label" for="filter_regulatory_function">Regulatory Function</label>-->
+<!--                <div id="subject-hint" class="govuk-hint">-->
+<!--                  Choose the functions covered-->
+<!--                </div>-->
+<!--                <select class="govuk-select govuk-!-width-full" id="filter_regulatory_function" name="sort">-->
+<!--                  <option value="all" selected>All</option>-->
+<!--                  <option value="environmental_health">Environmental Health</option>-->
+<!--                  <option value="trading_standards">Trading Standards</option>-->
+<!--                  <option value="fire_safety">Fire Safety</option>-->
+<!--                  <option value="licensing">Licensing</option>-->
+<!--                  <option value="petrol_storage_certification">Petrol Storage Certification</option>-->
+<!--                  <option value="explosives_licensing">Explosives Licensing</option>-->
+<!--                  <option value="health_safety">Health & Safety</option>-->
+<!--                </select>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="govuk-grid-column-one-third">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <fieldset class="govuk-fieldset" role="group" aria-describedby="start_date_hint">-->
+<!--                  <legend class="govuk-fieldset__legend">-->
+<!--                    Start Date-->
+<!--                  </legend>-->
+<!--                  <div class="govuk-date-input" id="filter_start_date">-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="filter_start_date_day">-->
+<!--                          Day-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-2" id="filter_start_date_day" name="start_date_day" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="filter_start_date_month">-->
+<!--                          Month-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-2" id="filter_start_date_month" name="start_date_month" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="start_date_year">-->
+<!--                          Year-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-4" id="start_date_year" name="start_date_year" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </fieldset>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="govuk-grid-column-one-third">-->
+<!--              <div class="govuk-form-group">-->
+<!--                <fieldset class="govuk-fieldset" role="group" aria-describedby="end_date_hint">-->
+<!--                  <legend class="govuk-fieldset__legend">-->
+<!--                    End Date-->
+<!--                  </legend>-->
+<!--                  <div class="govuk-date-input" id="filter_end_date">-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="filter_end_date_day">-->
+<!--                          Day-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-2" id="filter_end_date_day" name="end_date_day" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="filter_end_date_month">-->
+<!--                          Month-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-2" id="filter_end_date_month" name="end_date_month" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="govuk-date-input__item">-->
+<!--                      <div class="govuk-form-group">-->
+<!--                        <label class="govuk-label govuk-date-input__label" for="end_date_year">-->
+<!--                          Year-->
+<!--                        </label>-->
+<!--                        <input class="govuk-input govuk-date-input__input govuk-input&#45;&#45;width-4" id="end_date_year" name="end_date_year" type="text" inputmode="numeric">-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </fieldset>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          &lt;!&ndash; Buttons &ndash;&gt;-->
+<!--          <div class="govuk-button-group">-->
+<!--            <button class="govuk-button" data-module="govuk-button">-->
+<!--              Search-->
+<!--            </button>-->
+<!--            <button class="govuk-button govuk-button&#45;&#45;secondary" data-module="govuk-button">-->
+<!--              Save this search-->
+<!--            </button>-->
+<!--            <button class="govuk-button govuk-button&#45;&#45;secondary" data-module="govuk-button">-->
+<!--              Export-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <table class="govuk-table">-->
+<!--          <thead class="govuk-table__head">-->
+<!--          <tr class="govuk-table__row">-->
+<!--            <th id="view-authority-name-table-column" scope="col" class="govuk-table__header">Name</th>-->
+<!--            <th id="view-authority-type-table-column" scope="col" class="govuk-table__header">Type</th>-->
+<!--            <th id="view-authority-partnership-count-table-column" scope="col" class="govuk-table__header">Active Partnerships</th>-->
+<!--            <th id="view-authority-enforcement-count-table-column" scope="col" class="govuk-table__header">Enforcements Created</th>-->
+<!--          </tr>-->
+<!--          </thead>-->
+<!--          <tbody class="govuk-table__body">-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          <tr class="list-item-partnership">-->
+<!--            <td headers="view-authority-name-table-column" class="govuk-table__cell">West Borough</td>-->
+<!--            <td headers="view-authority-type-table-column" class="govuk-table__cell">Unitary Authority</td>-->
+<!--            <td headers="view-authority-partnership-count-table-column" class="govuk-table__cell">Partnership between West Borough & Tesco, Partnership between West Borough and VW, Partnership between West Borough and McDonalds</td>-->
+<!--            <td headers="view-authority-enforcement-count-table-column" class="govuk-table__cell"><strong>(6)</strong></td>-->
+<!--          </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
+
+<!--        <div>-->
+<!--          <p>Showing 1-10 of 2601 results</p>-->
+<!--        </div>-->
+
+<!--        <nav class="govuk-pagination" role="navigation" aria-label="results">-->
+<!--          <div class="govuk-pagination__prev">-->
+<!--            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">-->
+<!--              <svg class="govuk-pagination__icon govuk-pagination__icon&#45;&#45;prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">-->
+<!--                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>-->
+<!--              </svg>-->
+<!--              <span class="govuk-pagination__link-title">Previous</span></a>-->
+<!--          </div>-->
+<!--          <ul class="govuk-pagination__list">-->
+<!--            <li class="govuk-pagination__item">-->
+<!--              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">-->
+<!--                1-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="govuk-pagination__item govuk-pagination__item&#45;&#45;current">-->
+<!--              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">-->
+<!--                2-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="govuk-pagination__item">-->
+<!--              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">-->
+<!--                3-->
+<!--              </a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <div class="govuk-pagination__next">-->
+<!--            <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon&#45;&#45;next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">-->
+<!--              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>-->
+<!--            </svg></a>-->
+<!--          </div>-->
+<!--        </nav>-->
+<!--      </div>-->
+
+<!--      <div class="govuk-tabs__panel" id="organisations">-->
+<!--        <h2 class="govuk-heading-l">Organisations</h2>-->
+
+<!--        <div class="">-->
+<!--          <p>__filter form__</p>-->
+<!--          <br><br><br>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="govuk-tabs__panel" id="enforcements">-->
+<!--        <h2 class="govuk-heading-l">Enforcements</h2>-->
+
+<!--        <div class="">-->
+<!--          <p>__filter form__</p>-->
+<!--          <br><br><br>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="govuk-tabs__panel" id="advice">-->
+<!--        <h2 class="govuk-heading-l">Advice</h2>-->
+
+<!--        <div class="">-->
+<!--          <p>__filter form__</p>-->
+<!--          <br><br><br>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="govuk-tabs__panel" id="inspection_plans">-->
+<!--        <h2 class="govuk-heading-l">Inspection Plans</h2>-->
+
+<!--        <div class="">-->
+<!--          <p>__filter form__</p>-->
+<!--          <br><br><br>-->
+<!--        </div>-->
+<!--      </div>-->
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
