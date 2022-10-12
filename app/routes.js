@@ -85,7 +85,7 @@ router.post('/partnerships/legal-entities/add/check-process', function (req, res
 
     switch(answer) {
         case 'confirm':
-            res.redirect('/partnerships/manage')
+            res.redirect('/partnerships/manage/direct')
             break;
         default:
             res.redirect('/partnerships/legal-entities/add/name')
