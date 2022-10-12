@@ -5,6 +5,13 @@
   The Primary Authority Register Prototype
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/type",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -64,6 +71,7 @@
           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="op" value="confirm_and_add_another">
             Confirm and add another legal entity
           </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
         </div>
 
       </form>

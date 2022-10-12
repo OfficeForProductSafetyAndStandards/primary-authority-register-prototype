@@ -12,6 +12,13 @@
   <!-- blank to remove the proposition header -->
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
