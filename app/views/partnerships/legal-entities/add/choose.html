@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/type.html",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership update - Add legal entity</span>
+        Choose the registered organisation
+      </h1>
+
+      <form action="/partnerships/legal-entities/add/check" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registered-organisation--45454545" name="registered-organisation-number" type="radio" value="45454545">
+                <label class="govuk-label govuk-radios__label" for="registered-organisation--45454545">
+                  Some Registered Organisation (45454545)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registered-organisation--78787878" name="registered-organisation-number" type="radio" value="78787878">
+                <label class="govuk-label govuk-radios__label" for="registered-organisation--78787878">
+                  Some Other Registered Organisation (78787878)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="registered-organisation--123123123" name="registered-organisation-number" type="radio" value="123123123">
+                <label class="govuk-label govuk-radios__label" for="registered-organisation--123123123">
+                  Yet Another Registered Organisation (123123123)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="/partnerships/manage">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
