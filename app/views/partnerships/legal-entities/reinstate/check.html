@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership update - Reinstate legal entity</span>
+        Are you sure you wish to reinstate this legal entity?
+      </h1>
+
+      <form action="/partnerships/manage" method="post" class="form">
+        <div class="govuk-form-group">
+
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Name"
+                },
+                value: {
+                  text: "Sesame Restaurants Ltd"
+                }
+              },
+              {
+                key: {
+                  text: "Type of organisation"
+                },
+                value: {
+                  text: "Private Limited Company"
+                }
+              },
+              {
+                key: {
+                  text: "Registration number"
+                },
+                value: {
+                  html: "209823156"
+                }
+              }
+            ]
+          }) }}
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="confirm">
+            Confirm
+          </button>
+          <a class="govuk-link" href="/partnerships/manage">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
