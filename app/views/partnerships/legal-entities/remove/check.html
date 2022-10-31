@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership update - Remove legal entity</span>
+        Are you sure you wish to remove this legal entity?
+      </h1>
+
+      <form action="/partnerships/manage" method="post" class="form">
+        <div class="govuk-form-group">
+
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Name"
+                },
+                value: {
+                  text: "Sesame Distribution plc"
+                }
+              },
+              {
+                key: {
+                  text: "Type of organisation"
+                },
+                value: {
+                  text: "Public Limited Company"
+                }
+              },
+              {
+                key: {
+                  text: "Registration number"
+                },
+                value: {
+                  html: "456951758"
+                }
+              }
+            ]
+          }) }}
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="confirm">
+            Confirm
+          </button>
+          <a class="govuk-link" href="/partnerships/manage">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

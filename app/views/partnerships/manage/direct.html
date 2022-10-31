@@ -12,6 +12,13 @@
   <!-- blank to remove the proposition header -->
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -124,15 +131,44 @@
     </div>
 
     <div class="govuk-!-padding-bottom-5">
-      <h3 class="govuk-heading-m pager">
-        Legal Entities
-      </h3>
-      <ul class="govuk-list">
-        <li>(1623562) Sesame Cafes Ltd</li>
-        <li>(2903985) Sesame Restaurants Ltd</li>
-      </ul>
-
-      <p>__need to work out pagination, it isn't included in GOVUK Frontend__</p>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Legal entities</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Name</th>
+            <th scope="col" class="govuk-table__header">Active from</th>
+            <th scope="col" class="govuk-table__header">Active to</th>
+            <th scope="col" class="govuk-table__header">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Sesame Cafes Ltd<br/>Private Limited Company<br/>209823156</td>
+            <td class="govuk-table__cell">29 November 2021</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Sesame Restaurants Ltd<br/>Private Limited Company<br/>209823156</td>
+            <td class="govuk-table__cell">29 November 2021</td>
+            <td class="govuk-table__cell">13 April 2022</td>
+            <td class="govuk-table__cell">
+              <a href="/partnerships/legal-entities/reinstate/check">Reinstate</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Sesame Distribution plc<br/>Public Limited Company<br/>456951758</td>
+            <td class="govuk-table__cell">1 March 2022</td>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">
+              <a href="/partnerships/legal-entities/remove/check">Remove</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <a href="/partnerships/legal-entities/add/name.html">add a legal entity</a>
+      </p>
     </div>
 
     <div class="govuk-!-padding-bottom-5">

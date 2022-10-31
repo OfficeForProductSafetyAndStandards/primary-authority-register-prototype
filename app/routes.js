@@ -45,7 +45,6 @@ router.post('/partnerships/complete/additional-legal-entities-process', function
     }
 })
 
-// Process additional legal entities.
 router.post('/people/add/existing-process', function (req, res) {
     let answer = req.session.data['par_data_person_id']
 
@@ -56,7 +55,6 @@ router.post('/people/add/existing-process', function (req, res) {
     }
 })
 
-// Process additional legal entities.
 router.post('/people/add/account-process', function (req, res) {
     let answer = req.session.data['user-account']
 
@@ -64,6 +62,33 @@ router.post('/people/add/account-process', function (req, res) {
         res.redirect('/people/add/invite')
     } else {
         res.redirect('/people/add/review')
+    }
+})
+
+// Process partnership legal entity add type.
+router.post('/partnerships/legal-entities/add/type-process', function (req, res) {
+    let answer = req.session.data['organisation-type']
+
+    switch(answer) {
+        case 'registered_organisation':
+        case 'registered_charity':
+            res.redirect('/partnerships/legal-entities/add/choose')
+            break;
+        default:
+            res.redirect('/partnerships/legal-entities/add/check-unregistered')
+    }
+})
+
+// Process partnership legal entity add check.
+router.post('/partnerships/legal-entities/add/check-process', function (req, res) {
+    let answer = req.session.data['op']
+
+    switch(answer) {
+        case 'confirm':
+            res.redirect('/partnerships/manage/direct')
+            break;
+        default:
+            res.redirect('/partnerships/legal-entities/add/name')
     }
 })
 

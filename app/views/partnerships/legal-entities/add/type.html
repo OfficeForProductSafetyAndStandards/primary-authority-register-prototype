@@ -5,22 +5,30 @@
   The Primary Authority Register Prototype
 {% endblock %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/name",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Partnership update</span>
+        <span class="govuk-caption-xl">Partnership update - Add legal entity</span>
         What type of legal entity is this?
       </h1>
 
-      <form action="/partnerships/complete/additional-legal-entities" method="post" class="form">
+      <form action="/partnerships/legal-entities/add/type-process" method="post" class="form">
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+          <fieldset class="govuk-fieldset" aria-describedby="">
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
               <!-- Registered organisaation -->
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="registered-organisation" name="registered-organisation" type="radio" value="registered_organisation" data-aria-controls="conditional-registered-organisation">
+                <input class="govuk-radios__input" id="registered-organisation" name="organisation-type" type="radio" value="registered_organisation" data-aria-controls="conditional-registered-organisation">
                 <label class="govuk-label govuk-radios__label" for="registered-organisation">
                   A registered organisation
                 </label>
@@ -28,41 +36,10 @@
                   Please choose this option if the organisation or partnership is registered with Companies House.
                 </span>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-registered-organisation">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                      <h3 class="govuk-fieldset__heading">
-                        Choose the registered organisation
-                      </h3>
-                    </legend>
-                    <div class="govuk-radios govuk-radios--small">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--123456" name="registered-organisation-number" type="radio" value="123456">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--123456">
-                          Test Organisation (123456)
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--987654" name="registered-organisation-number" type="radio" value="987654">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--987654">
-                          Tester Organisation (987654)
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--3759383" name="registered-organisation-number" type="radio" value="3759383">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--3759383">
-                          Bestest Organisation (3759383)
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
 
               <!-- Charity -->
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="registered-charity" name="registered-organisation" type="radio" value="registered_charity" data-aria-controls="conditional-unregistered-organisation">
+                <input class="govuk-radios__input" id="registered-charity" name="organisation-type" type="radio" value="registered_charity" data-aria-controls="conditional-unregistered-organisation">
                 <label class="govuk-label govuk-radios__label" for="partnership-regulatory-functions-bespoke">
                   A charity
                 </label>
@@ -70,41 +47,10 @@
                   Please choose this option if the charity is registered with the Charity Commission.
                 </span>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-registered-charity">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                      <h3 class="govuk-fieldset__heading">
-                        Choose the registered charity
-                      </h3>
-                    </legend>
-                    <div class="govuk-radios govuk-radios--small">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--1234567" name="registered-organisation-number" type="radio" value="123456">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--123456">
-                          Test Charity (123456)
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--9876547" name="registered-organisation-number" type="radio" value="987654">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--987654">
-                          Tester Charity (987654)
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="registered-organisation--37593837" name="registered-organisation-number" type="radio" value="3759383">
-                        <label class="govuk-label govuk-radios__label" for="registered-organisation--3759383">
-                          Restest Charity (3759383)
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
 
               <!-- Other -->
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="partnership-regulatory-functions-bespoke" name="registered-organisation" type="radio" value="partnership" data-aria-controls="conditional-unregistered-organisation">
+                <input class="govuk-radios__input" id="partnership-regulatory-functions-bespoke" name="organisation-type" type="radio" value="unregistered" data-aria-controls="conditional-unregistered-organisation">
                 <label class="govuk-label govuk-radios__label" for="partnership-regulatory-functions-bespoke">
                   An unregistered organisation
                 </label>
@@ -136,14 +82,14 @@
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="unregistered-organisation--association" name="organisation-type" type="radio" value="unincorporated-association">
+                        <input class="govuk-radios__input" id="unregistered-organisation--association" name="unregistered-organisation-type" type="radio" value="unincorporated-association">
                         <label class="govuk-label govuk-radios__label" for="unregistered-organisation--association">
                           <div><p>Unincorporated association</p></div>
                           <div><p class="govuk-hint">A simple way for a group of volunteers to run an organisation for a common purpose.</p></div>
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="unregistered-organisation--other" name="organisation-type" type="radio" value="other">
+                        <input class="govuk-radios__input" id="unregistered-organisation--other" name="unregistered-organisation-type" type="radio" value="other">
                         <label class="govuk-label govuk-radios__label" for="unregistered-organisation--other">
                           <div><p>Other</p></div>
                         </label>
@@ -156,11 +102,11 @@
           </fieldset>
         </div>
 
-        <div class="govuk-form-group">
+        <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-          <p><a class="govuk-link" href="/">Cancel</a></p>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
         </div>
 
       </form>
