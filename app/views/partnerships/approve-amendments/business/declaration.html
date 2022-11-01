@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  href: "/",
+  text: "Back"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Approval by the business of partnership amendments</span>
+        Approve the amendments
+      </h1>
+
+      <form action="/partnerships/approve-amendments/business/finish" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="edit-confirm" name="waste" type="checkbox" value="on">
+              <label class="govuk-label govuk-checkboxes__label" for="edit-confirm">
+                I have read and agree to the <a href="#">terms &amp; conditions (opens in a new window)</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <div>
+            <p>Please check everything is correct, once you submit these details, they will be sent for approval by the representative of the Secretary of State.</p>
+          </div>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="/">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
