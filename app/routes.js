@@ -84,11 +84,11 @@ router.post('/partnerships/legal-entities/add/check-process', function (req, res
     let answer = req.session.data['op']
 
     switch(answer) {
-        case 'confirm':
-            res.redirect('/partnerships/manage/direct')
+        case 'add_another':
+            res.redirect('/partnerships/legal-entities/add/name')
             break;
         default:
-            res.redirect('/partnerships/legal-entities/add/name')
+            res.redirect('/partnerships/legal-entities/add/declaration')
     }
 })
 
