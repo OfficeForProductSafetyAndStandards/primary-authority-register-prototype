@@ -1,0 +1,141 @@
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.0
+
+references:
+  defaults: &defaults
+    docker:
+      - image: node:lts
+        name: proto
+        environment:
+          APP_ENV: ci
+          SENTRY_ENVIRONMENT: ci
+
+    resource_class: large
+
+    environment:
+      APP_NAME: beis-par-prototype
+
+    working_directory: /usr/app
+
+  clean_working_directory: &clean_working_directory
+    run:
+      name: "Clean the default directory"
+      command: |
+        cd /
+        rm -fr /usr/app
+        mkdir -p /usr/app
+
+  restore_code: &restore_code
+    restore_cache:
+      keys:
+        - v1-repo-{{ .Branch }}-{{ .Revision }}
+
+  restore_dependencies: &restore_dependencies
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "package-lock.json" }}
+
+  build_assets: &build_assets
+    run:
+      name: "Make asset bundle"
+      command: |
+        cd /tmp/workspace
+        echo "{ \"build\" : \"${CIRCLE_BUILD_NUM}\", \"tag\":\"${CIRCLE_TAG}\", \"time\":\"$(date -u)\"}" > web/build_version.txt
+        tar -zcf /tmp/$CIRCLE_TAG.tar.gz .
+
+  remove_assets: &remove_assets
+    run:
+      name: "Remove unwanted files from the asset bundle"
+      command: |
+        cd /tmp/workspace
+        rm -fr /docs
+
+  workspace_root: &workspace_root
+    /tmp/workspace
+
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: *workspace_root
+
+jobs:
+  checkout_code:
+    <<: *defaults
+    steps:
+      - *clean_working_directory
+      - *restore_code
+      - checkout:
+          post:
+            - git fetch --tags
+      - save_cache:
+          key: v1-repo-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - .
+
+  compile_code:
+    <<: *defaults
+    steps:
+      - *clean_working_directory
+      - *restore_code
+      - *restore_dependencies
+      - run:
+          name: "Installing app"
+          command: |
+            echo "$(pwd)"
+            npm install
+      - save_cache:
+          key: v11-dependencies-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: "Create workspace"
+          command: |
+            mkdir -p /tmp/workspace
+            cp -rT . /tmp/workspace
+      - persist_to_workspace:
+          root: *workspace_root
+          paths:
+            - .
+
+  deploy:
+    <<: *defaults
+    steps:
+      - *clean_working_directory
+      - *attach_workspace
+      - *restore_code
+      - *restore_dependencies
+      - *build_assets
+      - *remove_assets
+      - run:
+          name: "Examine asset bundle."
+          command: |
+            ls -lah /tmp/workspace
+      - run:
+          name: "Deploy to prototype"
+          command: |
+            printf "$DEPLOY_ENV\n"
+            ./devops/cf/push.local.sh -T $CIRCLE_TAG -d /tmp/workspace $APP_NAME
+
+workflows:
+  version: 2.1
+  build_deploy:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              only:
+                - master
+      - compile_code:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              only:
+                - master
+      - deploy:
+          requires:
+            - compile_code
+          filters:
+            branches:
+              only:
+                - master
