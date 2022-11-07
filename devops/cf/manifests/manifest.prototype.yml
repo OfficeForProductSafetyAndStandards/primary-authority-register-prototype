@@ -1,3 +1,9 @@
-memory: 2G
-disk_quota: 2048M
-buildpack: nodejs_buildpack
+applications:
+  - name: ((app))
+    routes:
+      - route: ((app)).cloudapps.digital
+    buildpacks:
+      - nodejs_buildpack
+    memory: 2G
+    disk_quota: 5G
+    timeout: 120

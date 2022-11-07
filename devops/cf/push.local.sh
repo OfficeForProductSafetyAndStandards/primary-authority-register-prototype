@@ -55,8 +55,8 @@ command -v git >/dev/null 2>&1 || {
 #    GOVUK_CF_USER (required) - the user deploying the script
 #    GOVUK_CF_PWD (required) - the password for the user account
 ####################################################################################
-OPTIONS=u:p:d:
-LONGOPTS=user:,password:,directory:
+OPTIONS=v:u:p:d:
+LONGOPTS=version:,user:,password:,directory:
 
 # -use ! and PIPESTATUS to get exit code with errexit set
 # -temporarily store output to be able to check for errors
@@ -78,7 +78,7 @@ GOVUK_CF_PWD=${GOVUK_CF_PWD:-}
 
 while true; do
     case "$1" in
-        -z|--version)
+        -v|--version)
             VERSION="$2"
             shift 2
             ;;
@@ -185,7 +185,7 @@ done
 ####################################################################################
 printf "Pushing the application...\n"
 
-cf push --no-start -f $MANIFEST -p $BUILD_DIR -n $APP_NAME $APP_NAME
+cf push --no-start -f $MANIFEST -p $BUILD_DIR --var app=$APP_NAME $APP_NAME
 
 
 ####################################################################################
@@ -195,8 +195,8 @@ printf "Starting the application...\n"
 
 cf start $APP_NAME
 
-## Run the cache warmer asynchronously with lots of memory
-cf run-task $APP_NAME "npm start" -m 2G --name START_APP
+## Start the app.
+#cf run-task $APP_NAME "npm start" -m 2G --name START_APP
 
 
 ####################################################################################

@@ -1,0 +1,33 @@
+# Ignore defaults
+.cfignore
+_darcs
+.DS_Store
+.git
+.gitignore
+.hg
+manifest.yml
+.svn
+.env
+*.env
+
+# Ignore temporary assets
+## Exclude all temporary files except the seed database @SEE PAR-1938
+!backups/
+backups/*
+!/backups/db-seed.tar.gz
+
+# Ignore non-app files
+/devops/dashboard
+/devops/docker
+/devops/vault
+/clamav
+/tests
+
+# Ignore package files
+## Temporary fix: @SEE PAR-1705
+
+# Ignore config files
+phpunit.xml
+
+# Ignore local only files
+/web/sites/default/settings.local.php
