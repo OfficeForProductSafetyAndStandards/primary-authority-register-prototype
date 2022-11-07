@@ -41,7 +41,7 @@ references:
       name: "Make asset bundle"
       command: |
         cd /tmp/workspace
-        echo "{ \"build\" : \"${CIRCLE_BUILD_NUM}\", \"tag\":\"${CIRCLE_TAG}\", \"time\":\"$(date -u)\"}" > web/build_version.txt
+        echo "{ \"build\" : \"${CIRCLE_BUILD_NUM}\", \"tag\":\"${CIRCLE_TAG}\", \"time\":\"$(date -u)\"}" > app/build_version.txt
         tar -zcf /tmp/$CIRCLE_TAG.tar.gz .
 
   remove_assets: &remove_assets
@@ -114,7 +114,7 @@ jobs:
           name: "Deploy to prototype"
           command: |
             printf "$DEPLOY_ENV\n"
-            ./devops/cf/push.local.sh -T $CIRCLE_TAG -d /tmp/workspace $APP_NAME
+            ./devops/cf/push.local.sh -T $CIRCLE_TAG -d /tmp/workspace
 
 workflows:
   version: 2.1
@@ -122,20 +122,23 @@ workflows:
     jobs:
       - checkout_code:
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
       - compile_code:
           requires:
             - checkout_code
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
       - deploy:
           requires:
             - compile_code
           filters:
+            tags:
+              only: /^v.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
