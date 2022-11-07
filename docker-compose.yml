@@ -2,7 +2,7 @@ version: "3.1"
 
 services:
   web:
-    image: node:lts
+    image: beispar/proto:latest
     container_name: beis-par-proto
     ports:
       - "3000:3000"

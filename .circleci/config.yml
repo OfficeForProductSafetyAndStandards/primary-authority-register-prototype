@@ -5,7 +5,7 @@ orbs:
 references:
   defaults: &defaults
     docker:
-      - image: node:lts
+      - image: beispar/proto:latest
         name: proto
         environment:
           APP_ENV: ci

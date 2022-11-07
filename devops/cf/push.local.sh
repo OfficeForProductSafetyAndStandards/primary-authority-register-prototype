@@ -35,13 +35,6 @@ if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
     exit 1
 fi
 
-command -v vault >/dev/null 2>&1 || {
-    echo "################################################################################################"
-    echo >&2 "Please install Vault CLI - https://www.vaultproject.io/docs/install/index.html"
-    echo "################################################################################################"
-    exit 1
-}
-
 command -v cf >/dev/null 2>&1 || {
     echo "################################################################################################"
     echo >&2 "Please install Cloud Foundry CLI - https://docs.cloudfoundry.org/cf-cli/install-go-cli.html"
@@ -119,8 +112,6 @@ done
 #    GOVUK_CF_USER (required) - the user deploying the script
 #    GOVUK_CF_PWD (required) - the password for the user account
 #    BUILD_DIR - the directory containing the build assets
-#    VAULT_ADDR - the vault service endpoint
-#    VAULT_UNSEAL_KEY (required) - the key used to unseal the vault
 ####################################################################################
 if [[ -z "${GOVUK_CF_USER}" ]]; then
     echo -n "Enter your Cloud Foundry username: "
