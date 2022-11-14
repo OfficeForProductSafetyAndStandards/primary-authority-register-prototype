@@ -1,0 +1,78 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/manage/direct",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form action="/partnerships/legal-entities/add/choose-existing-process" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="legal-entities-hint">
+
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+                Choose an existing legal entity
+              </h1>
+            </legend>
+            <div id="legal-entities-hint" class="govuk-hint">
+              Select all legal entities that apply
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="legal-entities-1" name="legal-entities" type="checkbox" value="648754">
+                <label class="govuk-label govuk-checkboxes__label" for="legal-entities-1">
+                  Sesame Street Nail Bars Ltd (648754)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="legal-entities-2" name="legal-entities" type="checkbox" value="454678">
+                <label class="govuk-label govuk-checkboxes__label" for="legal-entities-2">
+                  Sesame Street Drive-thru Crematoriums Ltd (454678)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="legal-entities-3" name="legal-entities" type="checkbox" value="763452">
+                <label class="govuk-label govuk-checkboxes__label" for="legal-entities-3">
+                  Sesame Street Artisanal Abattoir and Garden Center (763452)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__divider">or</div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="legal-entities-5" name="legal-entities" type="checkbox" value="none" data-behaviour="exclusive">
+                <label class="govuk-label govuk-checkboxes__label" for="legal-entities-5">
+                  No, I want to add a different legal entitiy
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

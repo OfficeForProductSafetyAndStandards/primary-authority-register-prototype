@@ -16,14 +16,17 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
-        What type of legal entity is this?
-      </h1>
 
       <form action="/partnerships/legal-entities/add/type-process" method="post" class="form">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+                What type of legal entity is this?
+              </h1>
+            </legend>
+
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
               <!-- Registered organisaation -->

@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-href: "/partnerships/manage/direct",
+href: "/partnerships/legal-entities/add/choose-existing",
 text: "Back"
 }) }}
 {% endblock %}
@@ -16,18 +16,16 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
-        What is the name of the legal entity?
-      </h1>
 
       <form action="/partnerships/legal-entities/add/type" method="post" class="form">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="name">
-            <h2 class="govuk-heading-m">
-              Enter the legal entity name
-            </h2>
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="name">
+            What is the name of the legal entity?
           </label>
+          </h1>
+          <div id="example-hint" class="govuk-hint">
+            Enter the legal entity name
+          </div>
           <input class="govuk-input govuk-input--width-20" id="name" name="name" type="text">
         </div>
 

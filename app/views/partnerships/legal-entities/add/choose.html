@@ -16,14 +16,20 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
-        Choose the registered organisation
-      </h1>
 
-      <form action="/partnerships/legal-entities/add/check-registered" method="post" class="form">
+      <form action="/partnerships/legal-entities/add/check" method="post" class="form">
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
+          <fieldset class="govuk-fieldset" aria-describedby="select-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+                Choose the registered organisation
+              </h1>
+            </legend>
+            <div id="select-hint" class="govuk-hint">
+              We found the following organisations on the register. Select the one you wish to add.
+            </div>
+
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="registered-organisation--45454545" name="registered-organisation-number" type="radio" value="45454545">

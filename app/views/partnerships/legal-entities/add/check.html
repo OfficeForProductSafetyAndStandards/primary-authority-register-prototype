@@ -1,0 +1,72 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/type",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form action="/partnerships/legal-entities/add/check-process" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="confirm-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+                Confirm legal entity details
+              </h1>
+            </legend>
+            <div id="confirm-hint" class="govuk-hint">
+              These are the legal entities that will be added to the partnership.
+            </div>
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Name</th>
+                <th scope="col" class="govuk-table__header">Type</th>
+                <th scope="col" class="govuk-table__header">Number</th>
+              </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">Faversham Fishing Co-operative Society</td>
+                <td class="govuk-table__cell">Unincorporated association</td>
+                <td class="govuk-table__cell"></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td scope="row" class="govuk-table__header">Sesame Street Drive-thru Crematoriums Ltd</td>
+                <td class="govuk-table__cell">Private limited company</td>
+                <td class="govuk-table__cell">454678</td>
+              </tr>
+              </tbody>
+            </table>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="confirm">
+            Confirm
+          </button>
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" name="op" value="add_another">
+            Add another legal entity
+          </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

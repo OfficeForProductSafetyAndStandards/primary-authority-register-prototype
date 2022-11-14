@@ -65,6 +65,19 @@ router.post('/people/add/account-process', function (req, res) {
     }
 })
 
+// Process partnership legal entity choose-existing.
+router.post('/partnerships/legal-entities/add/choose-existing-process', function (req, res) {
+    let answer = req.session.data['legal-entities']
+
+    switch(answer[0]) {
+        case 'none':
+            res.redirect('/partnerships/legal-entities/add/name')
+            break;
+        default:
+            res.redirect('/partnerships/legal-entities/add/check')
+    }
+})
+
 // Process partnership legal entity add type.
 router.post('/partnerships/legal-entities/add/type-process', function (req, res) {
     let answer = req.session.data['organisation-type']
@@ -75,7 +88,7 @@ router.post('/partnerships/legal-entities/add/type-process', function (req, res)
             res.redirect('/partnerships/legal-entities/add/choose')
             break;
         default:
-            res.redirect('/partnerships/legal-entities/add/check-unregistered')
+            res.redirect('/partnerships/legal-entities/add/check')
     }
 })
 
@@ -85,7 +98,7 @@ router.post('/partnerships/legal-entities/add/check-process', function (req, res
 
     switch(answer) {
         case 'add_another':
-            res.redirect('/partnerships/legal-entities/add/name')
+            res.redirect('/partnerships/legal-entities/add/choose-existing')
             break;
         default:
             res.redirect('/partnerships/legal-entities/add/declaration')

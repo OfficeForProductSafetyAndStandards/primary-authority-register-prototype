@@ -13,14 +13,17 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-xl">Approval by the business of partnership amendments</span>
-        Approve the amendments
-      </h1>
 
       <form action="/partnerships/approve-amendments/business/finish" method="post" class="form">
 
         <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">Approval by the business of partnership amendments</span>
+              Approve the amendments
+            </h1>
+          </legend>
+
           <div class="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="edit-confirm" name="waste" type="checkbox" value="on">
@@ -31,11 +34,10 @@
           </div>
         </div>
 
-        <div class="govuk-form-group">
-          <div>
-            <p>Please be sure that everything is correct, once you agree these changes by submitting this page, they will be sent for approval by the representative of the Secretary of State.</p>
-          </div>
-        </div>
+        <p class="govuk-body">
+          Please be sure that everything is correct, once you agree these changes by submitting this page, they will be
+          sent for approval by the representative of the Secretary of State.
+        </p>
 
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
