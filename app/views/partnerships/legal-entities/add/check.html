@@ -7,7 +7,7 @@
 
 {% block beforeContent %}
 {{ govukBackLink({
-href: "/partnerships/legal-entities/add/type",
+href: "/partnerships/legal-entities/add/companies-results",
 text: "Back"
 }) }}
 {% endblock %}
@@ -32,23 +32,26 @@ text: "Back"
 
             <table class="govuk-table">
               <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Name</th>
-                <th scope="col" class="govuk-table__header">Type</th>
-                <th scope="col" class="govuk-table__header">Number</th>
-              </tr>
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Legal entity</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
               </thead>
               <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__header">Faversham Fishing Co-operative Society</td>
-                <td class="govuk-table__cell">Unincorporated association</td>
-                <td class="govuk-table__cell"></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td scope="row" class="govuk-table__header">Sesame Street Drive-thru Crematoriums Ltd</td>
-                <td class="govuk-table__cell">Private limited company</td>
-                <td class="govuk-table__cell">454678</td>
-              </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    Faversham Fishing Co-operative Society</br>
+                    <span style="color:#505a5f;">Unincorporated association</span>
+                  </td>
+                  <td class="govuk-table__cell"><a href="#" class="govuk-link">remove</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td  class="govuk-table__cell">
+                    Sesame Street Drive-thru Crematoriums Ltd</br>
+                    <span style="color:#505a5f;">Private limited company 454678</span>
+                  </td>
+                  <td class="govuk-table__cell"><a href="#" class="govuk-link">remove</a></td>
+                </tr>
               </tbody>
             </table>
           </fieldset>

@@ -71,7 +71,7 @@ router.post('/partnerships/legal-entities/add/choose-existing-process', function
 
     switch(answer[0]) {
         case 'none':
-            res.redirect('/partnerships/legal-entities/add/name')
+            res.redirect('/partnerships/legal-entities/add/type')
             break;
         default:
             res.redirect('/partnerships/legal-entities/add/check')
@@ -85,7 +85,20 @@ router.post('/partnerships/legal-entities/add/type-process', function (req, res)
     switch(answer) {
         case 'registered_organisation':
         case 'registered_charity':
-            res.redirect('/partnerships/legal-entities/add/choose')
+            res.redirect('/partnerships/legal-entities/add/companies-search')
+            break;
+        default:
+            res.redirect('/partnerships/legal-entities/add/internal')
+    }
+})
+
+// Process partnership legal entity companies-search.
+router.post('/partnerships/legal-entities/add/companies-search-process', function (req, res) {
+    let answer = req.session.data['op']
+
+    switch(answer) {
+        case 'search':
+            res.redirect('/partnerships/legal-entities/add/companies-results')
             break;
         default:
             res.redirect('/partnerships/legal-entities/add/check')

@@ -1,0 +1,125 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/type",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+      <h1 class="govuk-heading-xl">Find a legal entity at Companies House</h1>
+
+      <form action="/partnerships/legal-entities/add/companies-search-process" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="search-name">
+              What is the name of the legal entity?
+            </label>
+          </h1>
+          <input class="govuk-input" id="search-name" name="search-name" type="text">
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with searching
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              The search of the Companies House register tries to match all the words entered and returns the closest 20
+              results. If you are having difficulty finding the legal entity try variations of spelling.
+            </p>
+            <p>
+              We only search the active register. If the legal entity is closed or in receivership it will not be found.
+            </p>
+            <p>
+              Companies House provide an
+              <a href="https://find-and-update.company-information.service.gov.uk/advanced-search/">advanced company search</a>.
+              This has many more search options, and searches both active and closed registers.
+            </p>
+          </div>
+        </details>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="search">
+            Search again
+          </button>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="results-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Choose the legal entity
+              </h1>
+            </legend>
+            <div id="results-hint" class="govuk-hint">
+              We have found four matching legal entities in the register.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="results-1" name="results" type="checkbox" value="648754">
+                <label class="govuk-label govuk-checkboxes__label" for="results-1">
+                  Sesame Street Nail Bars Ltd
+                </label>
+                <div id="results-1-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Private limited company 648754
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="results-2" name="results" type="checkbox" value="454678">
+                <label class="govuk-label govuk-checkboxes__label" for="results-2">
+                  Sesame Street Drive-thru Crematoriums Ltd
+                </label>
+                <div id="results-2-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Private limited company 454678
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="results-3" name="results" type="checkbox" value="763452">
+                <label class="govuk-label govuk-checkboxes__label" for="results-3">
+                  Sesame Street Artisanal Abattoir and Garden Center
+                </label>
+                <div id="results-3-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Limited liability partnership 763452
+                </div>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="results-4" name="results" type="checkbox" value="657865">
+                <label class="govuk-label govuk-checkboxes__label" for="results-4">
+                  Sesame Street Asteriod Mining plc
+                </label>
+                <div id="results-4-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Public limited company 657865
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="check">
+            Continue
+          </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

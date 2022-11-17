@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/choose-existing",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form action="/partnerships/legal-entities/add/check" method="post" class="form">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Enter the legal entity details
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="name">
+              Name
+            </label>
+            <input class="govuk-input" id="name" name="name" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                What type of organisation is this?
+              </legend>
+              <div class="govuk-radios govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="unregistered-organisation--partnership" name="unregistered-organisation-type" type="radio" value="partnership">
+                  <label class="govuk-label govuk-radios__label" for="unregistered-organisation--partnership">
+                    Partnership
+                    <p class="govuk-hint">A partnership is a contractual arrangement between two or more people that is set up with a view to profit and to share the profits amongst the partners. </p>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="unregistered-organisation--sole-trader" name="unregistered-organisation-type" type="radio" value="sole-trader">
+                  <label class="govuk-label govuk-radios__label" for="unregistered-organisation--sole-trader">
+                    Sole Trader
+                    <p class="govuk-hint">A sole trader is an individual who is registered with HMRC for tax purposes.</p>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="unregistered-organisation--association" name="unregistered-organisation-type" type="radio" value="unincorporated-association">
+                  <label class="govuk-label govuk-radios__label" for="unregistered-organisation--association">
+                    Unincorporated association
+                    <p class="govuk-hint">A simple way for a group of volunteers to run an organisation for a common purpose.</p>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="unregistered-organisation--other" name="unregistered-organisation-type" type="radio" value="other">
+                  <label class="govuk-label govuk-radios__label" for="unregistered-organisation--other">
+                    Other
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </fieldset>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/partnerships/legal-entities/add/type",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+      <h1 class="govuk-heading-xl">Find a legal entity at Companies House</h1>
+
+      <form action="/partnerships/legal-entities/add/companies-search-process" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="search-name">
+              What is the name of the legal entity?
+            </label>
+          </h1>
+          <input class="govuk-input" id="search-name" name="search-name" type="text">
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Help with searching
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              The search of the Companies House register tries to match all the words entered and returns the closest 20
+              results. If you are having difficulty finding the legal entity try variations of spelling.
+            </p>
+            <p>
+              We only search the active register. If the legal entity is closed or in receivership it will not be found.
+            </p>
+            <p>
+              Companies House provide an
+              <a href="https://find-and-update.company-information.service.gov.uk/advanced-search/">advanced company search</a>.
+              This has many more search options, and searches both active and closed registers.
+            </p>
+          </div>
+        </details>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button" name="op" value="search">
+            Search
+          </button>
+          <a class="govuk-link" href="/partnerships/manage/direct">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
