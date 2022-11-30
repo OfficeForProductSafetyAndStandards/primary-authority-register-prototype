@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership update - Add legal entities</span>
+        Amendment complete
+      </h1>
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Amendment complete
+        </h1>
+        <div class="govuk-panel__body">
+          Now awaiting approval by the business organisation
+        </div>
+      </div>
+
+      <p class="govuk-body">We have saved the partnership amendments you have made.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        The business organisation has been informed of the amendments and asked for their approval.
+      </p>
+      <p class="govuk-body">
+        Once the business approves the amendments OSU will complete the nomination.
+      </p>
+
+      <form action="/index" method="post" class="form">
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Done
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

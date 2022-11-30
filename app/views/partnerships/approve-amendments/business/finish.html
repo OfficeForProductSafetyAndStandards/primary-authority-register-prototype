@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Approval by the business of partnership amendments</span>
+        Approval complete
+      </h1>
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Approval complete
+        </h1>
+        <div class="govuk-panel__body">
+          Awaiting approval by the representative of the Secretary of State
+        </div>
+      </div>
+
+      <p class="govuk-body">
+        Your approval of the partnership amendments has been noted.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        The representative of the Secretary of State will approve the nomination of the partnership.
+      </p>
+
+      <form action="/index" method="post" class="form">
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Done
+          </button>
+        </div>
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

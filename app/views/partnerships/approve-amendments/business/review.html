@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Approval by the business of partnership amendments</span>
+      Review the amended partnership details
+    </h1>
+
+    <p class="govuk-body">New legal entities have been added to the partnership. Please review the details below.</p>
+
+    <div class="govuk-!-padding-bottom-5">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Name</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Number</th>
+        </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Faversham Fishing Co-operative Society</td>
+          <td class="govuk-table__cell">Unincorporated association</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Sesame Street Drive-thru Crematoriums Ltd</td>
+          <td class="govuk-table__cell">Private limited company</td>
+          <td class="govuk-table__cell">454678</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="govuk-body">
+      If the details are correct click Continue. If this information is in error please contact Mrs Jane Smith on
+      <a href="tel:017088898763">017088898763</a>, on <a href="tel:07999888777">07999888777</a>, or at
+      <a href="mailto:jane.smith@sesameboroughcouncil.gov.uk">jane.smith@sesameboroughcouncil.gov.uk</a>.
+    </p>
+
+    <form action="/partnerships/approve-amendments/business/terms-agree" method="post" class="form">
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="/">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

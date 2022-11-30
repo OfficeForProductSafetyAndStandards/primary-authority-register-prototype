@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Approval by OSU of partnership amendments</span>
+        Nomination complete
+      </h1>
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Nomination complete
+        </h1>
+        <div class="govuk-panel__body">
+          The amended partnership is now in effect
+        </div>
+      </div>
+
+      <form action="/index" method="post" class="form">
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Done
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

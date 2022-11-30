@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  href: "/",
+  text: "Back"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Approval by OSU of partnership amendments</span>
+        Are you authorised to approve these partnership amendments?
+      </h1>
+
+      <form action="/partnerships/approve-amendments/osu/finish" method="post" class="form">
+
+        <div class="govuk-form-group">
+          <h2>Please confirm that you are authorised to nominate this partnership</h2>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="edit-confirm" name="waste" type="checkbox" value="on">
+              <label class="govuk-label govuk-checkboxes__label" for="edit-confirm">
+                Yes, I am authorised to nominate this partnership</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="/">Cancel</a>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
