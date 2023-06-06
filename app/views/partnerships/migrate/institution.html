@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership migration</span>
+        Which authority would you like to migrate partnerships away from?
+      </h1>
+
+      <form action="/partnerships/migrate/regulatory-functions" method="post" class="form">
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <fieldset class="govuk-fieldset" aria-describedby="choose-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Enter the old authority
+                </h2>
+              </legend>
+              <div id="choose-hint" class="govuk-hint">
+                Once you enter the name of an authority you will be able to choose which authority to migrate to.
+              </div>
+
+              <input class="govuk-input" id="authority" name="authority" type="text">
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group govuk-grid-column-one-half">
+            <fieldset class="govuk-fieldset" aria-describedby="choose-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-fieldset__heading">
+                  Enter the new authority
+                </h2>
+              </legend>
+              <div id="choose-hint" class="govuk-hint">
+                Once you enter the name of an authority you will be able to choose which partnerships you would like to migrate.
+              </div>
+
+              <input class="govuk-input" id="authority" name="authority" type="text">
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

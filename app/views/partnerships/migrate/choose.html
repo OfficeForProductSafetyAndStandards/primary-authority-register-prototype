@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership migration</span>
+        Which partnerships would you like to migrate?
+      </h1>
+
+      <form action="/partnerships/migrate/regulatory-functions" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Choose the partnerships
+              </h2>
+            </legend>
+            <div id="choose-hint" class="govuk-hint">
+              Choose all the partnerships from this authority that you wish to change.
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-123456" name="partnership" type="checkbox" value="123456">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-123456">
+                  Partnership between County Council and Big Supermarket Chain
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-111111" name="partnership" type="checkbox" value="111111">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-111111">
+                  Partnership between County Council and Fast Food Restaurant
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-999999" name="partnership" type="checkbox" value="999999">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-999999">
+                  Partnership between County Council and Newspaper business
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-987654" name="partnership" type="checkbox" value="987654">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-987654">
+                  Partnership between County Council and Grocery Store
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-654321" name="partnership" type="checkbox" value="654321">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-654321">
+                  Partnership between County Council and Meat Supplier
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="partnership-232323" name="partnership" type="checkbox" value="232323">
+                <label class="govuk-label govuk-checkboxes__label" for="partnership-232323">
+                  Partnership between County Council and Independent Business
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

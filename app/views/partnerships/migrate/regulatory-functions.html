@@ -1,0 +1,95 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  The Primary Authority Register Prototype
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Partnership migration</span>
+        Manage regulatory functions
+      </h1>
+
+      <p>The authorities you are migrating from don't offer the same regulatory functions.</p>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <h2 class="govuk-heading-s">Regulatory Functions offered by the old authority:</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Health & Safety</li>
+            <li>Environmental health</li>
+            <li>Trading standards</li>
+            <li>Licensing</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <h2 class="govuk-heading-s">Regulatory Functions offered by the new authority:</h2>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Health & Safety</li>
+            <li>Environmental health</li>
+            <li>Trading standards</li>
+<!--            <li>Explosives licensing</li>-->
+          </ul>
+        </div>
+      </div>
+
+      <form action="/partnerships/migrate/regulatory-functions" method="post" class="form">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="choose-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                How would you like to proceed?
+              </h2>
+            </legend>
+            <div id="choose-hint" class="govuk-hint">
+              Choose which regulatory functions should be given to the partnerships.
+            </div>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  Do not proceed.
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Ask the new authority to take on the responsibility for the missing regulatory functions
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Remove the missing regulatory functions from all partnerships.<br><strong>NOTE:</strong> This will change the partnership
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                  Copy the partnership to the new authority.
+                  <br>The new partnership will only cover the regulatory functions that the new authority can offer.
+                  <br>The old partnership will be changed to only cover the regulatory functions the new authority cannot offer.
+                  <br><strong>NOTE:</strong> This will change the partnership
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <p><a class="govuk-link" href="/">Cancel</a></p>
+        </div>
+
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
